@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bao55c34sxk5a"]
+
+[ext_resource type="Texture2D" uid="uid://b4ff4dhh6ftxp" path="res://MCSprites girl.png" id="1_168of"]
+[ext_resource type="Script" path="res://Player_Movements.gd" id="1_jef7k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jngvj"]
+size = Vector2(45, 93)
+
+[node name="Node2D" type="CharacterBody2D"]
+script = ExtResource("1_jef7k")
+move_speed = 200.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_168of")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 1.5)
+shape = SubResource("RectangleShape2D_jngvj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
