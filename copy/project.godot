@@ -12,8 +12,16 @@ config_version=5
 
 config/name="Gamjam!"
 run/main_scene="res://Player_Girl.tscn"
-config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=512
+window/size/viewport_height=324
+window/size/window_width_override=1024
+window/size/window_height_override=648
+window/stretch/mode="canvas_items"
 
 [dotnet]
 

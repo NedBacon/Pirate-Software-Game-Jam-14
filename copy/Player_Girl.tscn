@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bao55c34sxk5a"]
 
-[ext_resource type="Texture2D" uid="uid://b4ff4dhh6ftxp" path="res://MCSprites girl.png" id="1_168of"]
+[ext_resource type="Texture2D" uid="uid://d01g1fayni1fi" path="res://MC_Idle.png" id="1_168of"]
 [ext_resource type="Script" path="res://Player_Movements.gd" id="1_jef7k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jngvj"]
