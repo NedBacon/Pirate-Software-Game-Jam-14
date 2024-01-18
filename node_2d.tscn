@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cdojl4gxis845" path="res://icon - Copie.svg" id="4_umgit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_15511"]
-size = Vector2(17.7778, 35.5556)
+size = Vector2(16, 32)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nmbfa"]
 
