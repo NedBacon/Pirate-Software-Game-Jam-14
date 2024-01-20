@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://473cawf1kbou"
-path="res://.godot/imported/MC_Idle - Copie.png-af05a7870e80e1e0162d908ba2e7197e.ctex"
+uid="uid://chn7xx4fvb6id"
+path="res://.godot/imported/base female and male idle.png-7d830d38dd018a009a1cd232980853f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MC_Idle - Copie.png"
-dest_files=["res://.godot/imported/MC_Idle - Copie.png-af05a7870e80e1e0162d908ba2e7197e.ctex"]
+source_file="res://pixel art/characters/player/base female and male idle.png"
+dest_files=["res://.godot/imported/base female and male idle.png-7d830d38dd018a009a1cd232980853f0.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bje6djsm5hmpx"
-path="res://.godot/imported/MC_Idle.png-67c77212c1896ee0f95e7c176419bc80.ctex"
+uid="uid://b3b8gndelxpye"
+path="res://.godot/imported/Barta.png-ef7af644a4aff91ec730354478ab7ddb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/MC_Idle.png"
-dest_files=["res://.godot/imported/MC_Idle.png-67c77212c1896ee0f95e7c176419bc80.ctex"]
+source_file="res://pixel art/characters/npc/Barta.png"
+dest_files=["res://.godot/imported/Barta.png-ef7af644a4aff91ec730354478ab7ddb.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pirate-software-game-jam-14"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://town_layout.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,13 @@ window/size/viewport_height=324
 window/size/window_width_override=1024
 window/size/window_height_override=648
 window/stretch/mode="canvas_items"
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="npc"
+2d_physics/layer_3="enviroment/world"
+2d_physics/layer_4="interaction"
 
 [rendering]
 

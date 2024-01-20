@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3vx3xi5hkg2c"
-path="res://.godot/imported/pebble_path.png-e49ad06a7c9f5871e0d9022c5ace2568.ctex"
+uid="uid://bje6djsm5hmpx"
+path="res://.godot/imported/MC_Idle.png-08c97a042e64b9d94679262afbfcc857.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pebble_path.png"
-dest_files=["res://.godot/imported/pebble_path.png-e49ad06a7c9f5871e0d9022c5ace2568.ctex"]
+source_file="res://pixel art/characters/player/MC_Idle.png"
+dest_files=["res://.godot/imported/MC_Idle.png-08c97a042e64b9d94679262afbfcc857.ctex"]
 
 [params]
 

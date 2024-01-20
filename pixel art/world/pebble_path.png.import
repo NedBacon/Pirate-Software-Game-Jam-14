@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3uftr52usjpg"
-path="res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"
+uid="uid://d3vx3xi5hkg2c"
+path="res://.godot/imported/pebble_path.png-8b4d1216eb702ab5c0b4dc78b5ef5ae7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixil-frame-0.png"
-dest_files=["res://.godot/imported/pixil-frame-0.png-ad73aed19b00fd55eeaf2db0cae8f8ff.ctex"]
+source_file="res://pixel art/world/pebble_path.png"
+dest_files=["res://.godot/imported/pebble_path.png-8b4d1216eb702ab5c0b4dc78b5ef5ae7.ctex"]
 
 [params]
 
