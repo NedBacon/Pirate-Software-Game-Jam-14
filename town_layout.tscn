@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="2_sy563"]
 [ext_resource type="Texture2D" uid="uid://d3vx3xi5hkg2c" path="res://pebble_path.png" id="2_xhetb"]
 [ext_resource type="Texture2D" uid="uid://c3ktowyufiut1" path="res://pixel art/Sorcerer.png" id="4_7vhpa"]
-[ext_resource type="Texture2D" uid="uid://bje6djsm5hmpx" path="res://MC_Idle.png" id="4_p3s1n"]
+[ext_resource type="Texture2D" uid="uid://bje6djsm5hmpx" path="res://pixel art/MC_Idle.png" id="4_p3s1n"]
 [ext_resource type="Texture2D" uid="uid://dg56v7724xrld" path="res://pixel art/MC_F_Walk.png" id="4_xd467"]
 [ext_resource type="Texture2D" uid="uid://b3b8gndelxpye" path="res://pixel art/Barta.png" id="5_ckbsc"]
 

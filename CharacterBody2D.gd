@@ -11,11 +11,11 @@ func _physics_process(delta):
 
 	#move_and_slide()
 	#Get Input directon
-	# input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	input_direction = Vector2(
-		Input.get_axis("ui_left", "ui_right"),
-		Input.get_axis("ui_up", "ui_down")
-	)
+	input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	#input_direction = Vector2(
+		#Input.get_axis("ui_left", "ui_right"),
+		#Input.get_axis("ui_up", "ui_down")
+	#)
 	
 	# Update velocity
 	velocity = input_direction * SPEED
