@@ -298,11 +298,8 @@ shape = SubResource("RectangleShape2D_kddhj")
 position = Vector2(400, 0)
 shape = SubResource("RectangleShape2D_kddhj")
 
-[node name="GateCollider" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(464, 64)
-shape = SubResource("RectangleShape2D_kddhj")
-
 [node name="player" parent="." instance=ExtResource("3_s8e3b")]
+position = Vector2(55, 58)
 collision_mask = 6
 
 [node name="Sorcerer" type="Sprite2D" parent="."]
@@ -313,4 +310,5 @@ vframes = 3
 frame = 1
 
 [node name="Barta" parent="." instance=ExtResource("5_d4jda")]
-position = Vector2(266, 27)
+position = Vector2(255, 28)
+script = null

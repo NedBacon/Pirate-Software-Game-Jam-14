@@ -4,22 +4,12 @@ const SPEED = 100.0
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
 var input_direction : Vector2 = Vector2.ZERO
 var last_direction : int
+var is_chatting = false
 
-func _physics_process(delta):
-	# Handle jump.
-	# Input.is_action_just_pressed("ui_accept")
-
-	#move_and_slide()
+func _physics_process(_delta):
 	#Get Input directon
-	input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	#input_direction = Vector2(
-		#Input.get_axis("ui_left", "ui_right"),
-		#Input.get_axis("ui_up", "ui_down")
-	#)
-	
-	# Update velocity
+	input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * SPEED
-	
 	# Move and Slide function uses velicoty of charcter body to move character on map
 	move_and_slide()
 	update_animation()
@@ -52,3 +42,4 @@ func update_facing_direction():
 		animated_sprite.flip_h = false
 		animated_sprite.play("Walk_Up")
 		last_direction = 2
+
