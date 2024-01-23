@@ -1,11 +1,36 @@
-[gd_scene load_steps=5 format=3 uid="uid://hnpr1hscqkcd"]
+[gd_scene load_steps=7 format=3 uid="uid://hnpr1hscqkcd"]
 
 [ext_resource type="Texture2D" uid="uid://b3b8gndelxpye" path="res://pixel art/characters/npc/Barta.png" id="1_b653k"]
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_lct6e"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_skk2n"]
+atlas = ExtResource("1_b653k")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4mndf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_skk2n")
+}],
+"loop": true,
+"name": &"Idle_Down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Idle_Side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Idle_Up",
+"speed": 5.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v4mkq"]
-radius = 5.0
-height = 26.0
+radius = 8.0
+height = 32.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ogx5w"]
 radius = 27.0185
@@ -13,10 +38,8 @@ radius = 27.0185
 [node name="Barta" instance=ExtResource("1_lct6e")]
 collision_layer = 2
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("1_b653k")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 32)
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_4mndf")
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("CapsuleShape2D_v4mkq")
@@ -27,3 +50,6 @@ collision_layer = 8
 [node name="CollisionShape2D" parent="Interaction" index="0"]
 shape = SubResource("CircleShape2D_ogx5w")
 debug_color = Color(0.203922, 0.639216, 0, 0.419608)
+
+[node name="Label" parent="CanvasLayer/Control" index="0"]
+visible = false

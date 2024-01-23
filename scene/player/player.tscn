@@ -188,6 +188,7 @@ animations = [{
 size = Vector2(16, 16)
 
 [node name="player" type="CharacterBody2D"]
+y_sort_enabled = true
 position = Vector2(96, 64)
 disable_mode = 1
 input_pickable = true
