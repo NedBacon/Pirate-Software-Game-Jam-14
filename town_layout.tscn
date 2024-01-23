@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://bfkpsfqox8bgj"]
+[gd_scene load_steps=18 format=3 uid="uid://bfkpsfqox8bgj"]
 
 [ext_resource type="Texture2D" uid="uid://cdojl4gxis845" path="res://icon - Copie.svg" id="1_vqu8y"]
 [ext_resource type="Texture2D" uid="uid://d3vx3xi5hkg2c" path="res://pixel art/world/pebble_path.png" id="2_xhetb"]
 [ext_resource type="PackedScene" uid="uid://jeb2sd14g3eg" path="res://scene/player/player.tscn" id="3_s8e3b"]
-[ext_resource type="Texture2D" uid="uid://c3ktowyufiut1" path="res://pixel art/characters/npc/Sorcerer.png" id="4_7vhpa"]
-[ext_resource type="PackedScene" uid="uid://hnpr1hscqkcd" path="res://scene/npcs/barta.tscn" id="5_d4jda"]
+[ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="4_ci44g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ducov"]
 texture = ExtResource("1_vqu8y")
@@ -302,13 +301,5 @@ shape = SubResource("RectangleShape2D_kddhj")
 position = Vector2(55, 58)
 collision_mask = 6
 
-[node name="Sorcerer" type="Sprite2D" parent="."]
-position = Vector2(240, 136)
-texture = ExtResource("4_7vhpa")
-hframes = 2
-vframes = 3
-frame = 1
-
-[node name="Barta" parent="." instance=ExtResource("5_d4jda")]
-position = Vector2(255, 28)
-script = null
+[node name="Yarrwick" parent="." instance=ExtResource("4_ci44g")]
+position = Vector2(194, 65)

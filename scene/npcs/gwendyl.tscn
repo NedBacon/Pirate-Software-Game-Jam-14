@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://c22ubp1mkfffu"]
+
+[ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_6vhei"]
+[ext_resource type="Texture2D" uid="uid://mv8hmb5xs5jr" path="res://pixel art/characters/npc/Luminary_Gwendyl_Idle.png" id="2_q83g7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_llxoc"]
+radius = 6.0
+
+[node name="Gwendyl" instance=ExtResource("1_6vhei")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_q83g7")
+region_rect = Rect2(0, 0, 16, 32)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_llxoc")
+
+[node name="CollisionShape2D" parent="Interaction" index="0"]
+debug_color = Color(0, 0.6, 0.701961, 0.419608)

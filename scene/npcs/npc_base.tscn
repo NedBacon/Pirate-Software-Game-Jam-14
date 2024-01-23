@@ -1,19 +1,16 @@
 [gd_scene load_steps=2 format=3 uid="uid://blqjqxitljhi7"]
 
-[ext_resource type="Script" path="res://scene/npcs/npc_base.gd" id="1_5evjr"]
+[ext_resource type="PackedScene" uid="uid://c01st3e526y85" path="res://scene/npcs/interaction.tscn" id="1_mbmpf"]
 
 [node name="NPC_BASE" type="CharacterBody2D"]
 collision_layer = 2
-script = ExtResource("1_5evjr")
+motion_mode = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+region_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -16)
 
-[node name="Interaction" type="Area2D" parent="."]
-collision_layer = 8
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction"]
-
-[connection signal="body_entered" from="Interaction" to="." method="_on_interaction_body_entered"]
-[connection signal="body_exited" from="Interaction" to="." method="_on_interaction_body_exited"]
+[node name="Interaction" parent="." instance=ExtResource("1_mbmpf")]

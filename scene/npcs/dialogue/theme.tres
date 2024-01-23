@@ -1,7 +1,0 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://de4gtgyc1isn6"]
-
-[ext_resource type="FontFile" uid="uid://d2d1t3fr1tdl5" path="res://font/PixelifySans-VariableFont_wght.ttf" id="1_vh00e"]
-
-[resource]
-default_font = ExtResource("1_vh00e")
-default_font_size = 20

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3b8gndelxpye"
-path="res://.godot/imported/Barta.png-ef7af644a4aff91ec730354478ab7ddb.ctex"
+uid="uid://mv8hmb5xs5jr"
+path="res://.godot/imported/Luminary_Gwendyl_Idle.png-f3fe036e0552776f2e2fa8479c97e72d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/characters/npc/Barta.png"
-dest_files=["res://.godot/imported/Barta.png-ef7af644a4aff91ec730354478ab7ddb.ctex"]
+source_file="res://pixel art/characters/npc/Luminary_Gwendyl_Idle.png"
+dest_files=["res://.godot/imported/Luminary_Gwendyl_Idle.png-f3fe036e0552776f2e2fa8479c97e72d.ctex"]
 
 [params]
 

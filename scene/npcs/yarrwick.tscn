@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bq7mt1fgmubos"]
+
+[ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_cmsyv"]
+[ext_resource type="Texture2D" uid="uid://ss7owher3gvq" path="res://pixel art/characters/npc/Yarrwick_Idle.png" id="2_jgy4t"]
+[ext_resource type="Resource" uid="uid://dd85txiugxtb5" path="res://dialogue/yarrwick.dialogue" id="3_qiti0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tlmmr"]
+radius = 5.0
+
+[node name="Yarrwick" instance=ExtResource("1_cmsyv")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_jgy4t")
+region_rect = Rect2(0, 0, 18, 32)
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CapsuleShape2D_tlmmr")
+
+[node name="Interaction" parent="." index="2"]
+dialogue_resource = ExtResource("3_qiti0")
