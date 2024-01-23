@@ -11,7 +11,6 @@ height = 26.0
 radius = 27.8927
 
 [node name="Barta" instance=ExtResource("1_lct6e")]
-collision_layer = 2
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("1_b653k")
@@ -21,9 +20,6 @@ region_rect = Rect2(0, 0, 16, 32)
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("CapsuleShape2D_v4mkq")
 
-[node name="Interaction" parent="." index="2"]
-collision_layer = 8
-
 [node name="CollisionShape2D" parent="Interaction" index="0"]
 shape = SubResource("CircleShape2D_ogx5w")
 debug_color = Color(0.203922, 0.639216, 0, 0.419608)
@@ -31,3 +27,4 @@ debug_color = Color(0.203922, 0.639216, 0, 0.419608)
 [node name="Dialogue" parent="." index="3"]
 offset_left = 1.0
 offset_right = 1.0
+d_file = "res://scene/npcs/dialogue/dialogue_model.json"

@@ -4,7 +4,6 @@ const SPEED = 100.0
 @onready var animated_sprite : AnimatedSprite2D = $AnimatedSprite2D
 var input_direction : Vector2 = Vector2.ZERO
 var last_direction : int
-var is_chatting = false
 
 func _physics_process(_delta):
 	#Get Input directon
