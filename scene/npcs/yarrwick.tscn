@@ -1,22 +1,64 @@
-[gd_scene load_steps=5 format=3 uid="uid://bq7mt1fgmubos"]
+[gd_scene load_steps=9 format=3 uid="uid://b6pijowbb4xcj"]
 
-[ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_cmsyv"]
-[ext_resource type="Texture2D" uid="uid://ss7owher3gvq" path="res://pixel art/characters/npc/Yarrwick_Idle.png" id="2_jgy4t"]
-[ext_resource type="Resource" uid="uid://dd85txiugxtb5" path="res://dialogue/yarrwick.dialogue" id="3_qiti0"]
+[ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_18pa7"]
+[ext_resource type="Texture2D" uid="uid://e826awcd8bcp" path="res://pixel art/characters/npc/Yarrwick_Idle.png" id="2_gegqq"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tlmmr"]
-radius = 5.0
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr3iq"]
+atlas = ExtResource("2_gegqq")
+region = Rect2(0, 0, 18, 32)
 
-[node name="Yarrwick" instance=ExtResource("1_cmsyv")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxwxw"]
+atlas = ExtResource("2_gegqq")
+region = Rect2(0, 32, 18, 32)
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_jgy4t")
-region_rect = Rect2(0, 0, 18, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6q6y"]
+atlas = ExtResource("2_gegqq")
+region = Rect2(0, 64, 18, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aj62w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr3iq")
+}],
+"loop": true,
+"name": &"Idle_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxwxw")
+}],
+"loop": true,
+"name": &"Idle_Side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6q6y")
+}],
+"loop": true,
+"name": &"Idle_Up",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jiel3"]
+height = 32.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pvcga"]
+radius = 24.0
+
+[node name="Yarrwick" instance=ExtResource("1_18pa7")]
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_aj62w")
+autoplay = ""
 
 [node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("CapsuleShape2D_tlmmr")
+shape = SubResource("CapsuleShape2D_jiel3")
 
-[node name="Interaction" parent="." index="2"]
-dialogue_resource = ExtResource("3_qiti0")
+[node name="CollisionShape2D" parent="Interaction" index="0"]
+shape = SubResource("CircleShape2D_pvcga")
 
-[editable path="Interaction"]
+[node name="Label" parent="CanvasLayer/Control" index="0"]
+visible = false

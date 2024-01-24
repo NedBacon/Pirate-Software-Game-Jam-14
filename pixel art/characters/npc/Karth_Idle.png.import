@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e826awcd8bcp"
-path="res://.godot/imported/Yarrwick_Idle.png-c92ed6e8a45c0de1aa5e1e252c1cc087.ctex"
+uid="uid://b0gke36jvt15e"
+path="res://.godot/imported/Karth_Idle.png-67aad31779dfc9cb97d284182b8f82fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/characters/npc/Yarrwick_Idle.png"
-dest_files=["res://.godot/imported/Yarrwick_Idle.png-c92ed6e8a45c0de1aa5e1e252c1cc087.ctex"]
+source_file="res://pixel art/characters/npc/Karth_Idle.png"
+dest_files=["res://.godot/imported/Karth_Idle.png-67aad31779dfc9cb97d284182b8f82fa.ctex"]
 
 [params]
 

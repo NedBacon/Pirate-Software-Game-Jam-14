@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e826awcd8bcp"
-path="res://.godot/imported/Yarrwick_Idle.png-c92ed6e8a45c0de1aa5e1e252c1cc087.ctex"
+uid="uid://0paremq66m7g"
+path="res://.godot/imported/Dren_Idle.png-788b39ce115cc4c5b732b8e17cb0139f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/characters/npc/Yarrwick_Idle.png"
-dest_files=["res://.godot/imported/Yarrwick_Idle.png-c92ed6e8a45c0de1aa5e1e252c1cc087.ctex"]
+source_file="res://pixel art/characters/npc/Dren_Idle.png"
+dest_files=["res://.godot/imported/Dren_Idle.png-788b39ce115cc4c5b732b8e17cb0139f.ctex"]
 
 [params]
 
