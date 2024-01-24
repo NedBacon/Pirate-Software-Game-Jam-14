@@ -76,7 +76,7 @@ skip_dialogue={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/yarrwick.dialogue", "res://dialogue/vadomere.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/yarrwick.dialogue", "res://dialogue/vadomere.dialogue", "res://dialogue/rancent.dialogue")
 
 [layer_names]
 
