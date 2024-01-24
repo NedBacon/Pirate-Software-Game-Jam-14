@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://lp8itxxgifad"]
+[gd_scene load_steps=7 format=3 uid="uid://lp8itxxgifad"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_m2744"]
 [ext_resource type="Texture2D" uid="uid://knnspllbqyty" path="res://pixel art/characters/npc/Ethnar_Idle.png" id="2_6mi1s"]
@@ -42,13 +42,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jyw3q"]
-height = 32.0
-
 [node name="Ethnar" instance=ExtResource("1_m2744")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_745r0")
-
-[node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("CapsuleShape2D_jyw3q")

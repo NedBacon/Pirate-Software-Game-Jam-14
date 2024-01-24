@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dnqjuoxwmvfut"]
+[gd_scene load_steps=7 format=3 uid="uid://dnqjuoxwmvfut"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_ynvq1"]
 [ext_resource type="Texture2D" uid="uid://bupouc2hmy6yt" path="res://pixel art/characters/npc/Cyotin_Idle.png" id="2_16xvr"]
@@ -42,13 +42,14 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ueql0"]
-height = 32.0
-
 [node name="Cyotin" instance=ExtResource("1_ynvq1")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_7v7du")
 
-[node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("CapsuleShape2D_ueql0")
+[node name="CollisionShape2D2" parent="." index="1"]
+position = Vector2(0, -17)
+
+[node name="CollisionShape2D2" parent="Interaction" index="0"]
+position = Vector2(0, -11)
