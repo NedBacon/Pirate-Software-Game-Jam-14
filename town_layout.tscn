@@ -1,9 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://bfkpsfqox8bgj"]
+[gd_scene load_steps=19 format=3 uid="uid://bfkpsfqox8bgj"]
 
 [ext_resource type="Texture2D" uid="uid://cdojl4gxis845" path="res://icon - Copie.svg" id="1_vqu8y"]
 [ext_resource type="Texture2D" uid="uid://d3vx3xi5hkg2c" path="res://pixel art/world/pebble_path.png" id="2_xhetb"]
 [ext_resource type="PackedScene" uid="uid://jeb2sd14g3eg" path="res://scene/player/player.tscn" id="3_s8e3b"]
 [ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="4_ci44g"]
+[ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="5_b7cjh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ducov"]
 texture = ExtResource("1_vqu8y")
@@ -302,4 +303,7 @@ position = Vector2(55, 58)
 collision_mask = 6
 
 [node name="Yarrwick" parent="." instance=ExtResource("4_ci44g")]
-position = Vector2(194, 65)
+position = Vector2(342, 51)
+
+[node name="Vadomere" parent="." instance=ExtResource("5_b7cjh")]
+position = Vector2(90, 49)

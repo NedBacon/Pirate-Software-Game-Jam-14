@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dlm0h8n6myndu"
+path="res://.godot/imported/vadomere.dialogue-f0e98b1f216a08583445fd24bb05e77a.tres"
+
+[deps]
+
+source_file="res://dialogue/vadomere.dialogue"
+dest_files=["res://.godot/imported/vadomere.dialogue-f0e98b1f216a08583445fd24bb05e77a.tres"]
+
+[params]
+
+defaults=true

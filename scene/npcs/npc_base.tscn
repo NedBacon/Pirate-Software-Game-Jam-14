@@ -14,3 +14,5 @@ region_enabled = true
 position = Vector2(0, -16)
 
 [node name="Interaction" parent="." instance=ExtResource("1_mbmpf")]
+
+[editable path="Interaction"]

@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 const SPEED = 100.0
 
@@ -6,9 +7,9 @@ const SPEED = 100.0
 @onready var facing_direction = $Direction
 @onready var interaction_finder = $Direction/Interaction
 
-
 var input_direction : Vector2 = Vector2.ZERO
 var last_direction : int
+var quest_items = []
 
 func _physics_process(_delta):
 	#Get Input directon

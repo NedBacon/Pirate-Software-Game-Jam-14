@@ -18,3 +18,5 @@ shape = SubResource("CapsuleShape2D_tlmmr")
 
 [node name="Interaction" parent="." index="2"]
 dialogue_resource = ExtResource("3_qiti0")
+
+[editable path="Interaction"]

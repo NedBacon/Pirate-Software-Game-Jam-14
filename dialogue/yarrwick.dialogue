@@ -1,1 +1,51 @@
 ~ Start
+
+Yarrwick: [[Yoho|Ahoy]]! That lute and those clothes--ye be a bard.
+Yarrwick: Come here to best me tales? Argh! Don't bother! Listen and be amazed!
+Yarrwick: Perhaps I can entice ye with me favorite, The Lady of the Sea? No?
+Yarrwick: Well, what troubles be on yer mind, moilin' 'round like yer mad?
+- Maeve: I don't have time for your silly stories!Petherfar's been attacked!
+	=> bad_choice
+- Maeve: Who are you?I never seen you in this village before.
+	=> good_choice
+
+~ bad_choice
+
+Yarrwick: Drop yer anchors laddie! Silly stories?
+Yarrwick: Have ye deciphered the Keep o' the Doomseeker 'r stood eye t' glowin' eye 'gainst the Sons o' the Southern Seas, AND lived t' tell the tale?
+Yarrwick: Argh! 'Course not!
+Yarrwick: Aye, me tales be chronicles o' only the most adventurous and fierce events on the high seas.
+Maeve: ( He's still shouting every word )
+Maeve: Anyway, Magistrate Karth sent me to gain the trust of the Messenger of Lord Wendell.
+Yarrwick: Spy me first mate o'er yonder? Aye, the long rat, Mr. Tiggles!
+Maeve: ( ...that ferret with an eye-patch? )
+Yarrwick: Methinks a chantey is in order to cheer him from yer bad attitude! Whatcha know on that lute?
+Maeve: ( Ew, he's clapping  ) 
+Maeve: Is your head okay? Walk the plank too many times? Fall off the crow's nest?
+Maeve: ( Uh oh, he's dancing )
+Maeve: It's not sea chantey time, this is serious!
+Yarrwick: Aye, y'ev'r 'ear the one 'bout the Marooned Baffoon?
+Maeve: I'm not even sure what you said.
+Yarrwick: Argh, the tale o' the Buffoon twice Maroon'd, aye, but that be spoilin', ye privy to it?
+Maeve: ...Nnooo..?
+Maeve: But I don't want to be.
+Yarrwick: Aye, ye be thirsting fer the glorious Legend o' the Crimson Keg, then?
+Maeve: Nope.
+Maeve: That's not even real, is it?
+Maeve: Whatever, the Messenger. Do you know him?
+Yarrwick: Aye, he be surely a landlubber.
+Yarrwick: 'Gardless, he tethers up by me tent on occasion, flips me a coin if me riddles stump him!
+Yarrwick: Bards, I know 'em. Indulge in a riddle, won't ye?
+Maeve: Ugh! I don't have time for you and your stupid riddles!
+Yarrwick: Avast, lower yer tone! Even now the long rat be escaped!
+Yarrwick: Argh, that there scaring Mr. Tiggles...
+Yarrwick: ...argh, to yer fortune this village me not me ship...
+Yarrwick: ....argh, overboard with ye...
+Yarrwick: ...scallywags like yerself...
+Yarrwick: ...carry yer lute 'cross the plank, cast yerself into the sea...
+Yarrwick: Just wait 'til the messenger 'ears 'bout ye! 
+Maeve: Argh! Fine! I'll fetch the long rat for you!
+=> END
+
+~ good_choice
+=> END

@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://dialogue/balloon.gd" id="1_4u26j"]
+[ext_resource type="FontFile" uid="uid://d2d1t3fr1tdl5" path="res://font/PixelifySans-VariableFont_wght.ttf" id="2_2c1fw"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.0509804, 0.0745098, 0.152941, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -17,7 +18,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4m3"]
-bg_color = Color(0.121569, 0.121569, 0.121569, 1)
+bg_color = Color(0.12549, 0.168627, 0.301961, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -29,7 +30,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.0784314, 0.109804, 0.207843, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
@@ -41,18 +42,20 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy0d5"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.0784314, 0.109804, 0.207843, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 20
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
-default_font_size = 20
+default_font = ExtResource("2_2c1fw")
+default_font_size = 22
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
 Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
@@ -74,9 +77,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 21.0
-offset_top = -183.0
+offset_top = -107.0
 offset_right = -19.0
-offset_bottom = -19.0
+offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = SubResource("Theme_qq3yp")
@@ -108,6 +111,7 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
 skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+seconds_per_pause_step = 0.5
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
@@ -116,10 +120,10 @@ anchor_left = 0.226
 anchor_top = 0.166
 anchor_right = 0.961
 anchor_bottom = 0.168
-offset_left = -3.31201
-offset_top = -404.224
-offset_right = -0.63208
-offset_bottom = -0.552
+offset_left = 30.688
+offset_top = -394.224
+offset_right = 33.368
+offset_bottom = 9.448
 grow_horizontal = 2
 grow_vertical = 2
 
