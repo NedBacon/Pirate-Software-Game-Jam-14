@@ -1,5 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpu3x8ae0fqlm"]
+[gd_scene load_steps=4 format=3 uid="uid://cpu3x8ae0fqlm"]
 
 [ext_resource type="PackedScene" uid="uid://w3bepqupruyd" path="res://quest items/quest_item_base.tscn" id="1_wumtt"]
+[ext_resource type="Texture2D" path="res://pixel art/world/Houses_And_Quest_Items.png" id="2_iq6v4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j4rs1"]
+radius = 8.0
+height = 32.0
 
 [node name="FerretYarrwick" instance=ExtResource("1_wumtt")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_iq6v4")
+hframes = 15
+vframes = 14
+frame = 189
+
+[node name="CollisionShape2D" parent="." index="1"]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_j4rs1")

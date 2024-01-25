@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://qrajn78wd3mv"]
+[gd_scene load_steps=7 format=3 uid="uid://b4l385kelsp7e"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_2h4c6"]
-[ext_resource type="Texture2D" uid="uid://0paremq66m7g" path="res://pixel art/characters/npc/Dren_Idle.png" id="2_q8n44"]
+[ext_resource type="Texture2D" path="res://pixel art/characters/npc/Dren_Idle.png" id="2_q8n44"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_up4n7"]
 atlas = ExtResource("2_q8n44")
@@ -42,19 +42,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3yuke"]
-height = 32.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_jn8tu"]
-radius = 24.0
-
 [node name="Dren" instance=ExtResource("1_2h4c6")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_fe156")
-
-[node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("CapsuleShape2D_3yuke")
-
-[node name="CollisionShape2D" parent="Interaction" index="0"]
-shape = SubResource("CircleShape2D_jn8tu")

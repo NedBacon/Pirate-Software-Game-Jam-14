@@ -1,5 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://dow3rlwcbce77"]
+[gd_scene load_steps=4 format=3 uid="uid://dow3rlwcbce77"]
 
 [ext_resource type="PackedScene" uid="uid://w3bepqupruyd" path="res://quest items/quest_item_base.tscn" id="1_vv8o7"]
+[ext_resource type="Texture2D" path="res://pixel art/world/Houses_And_Quest_Items.png" id="2_bo7um"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mjinq"]
+radius = 8.0
 
 [node name="QuiverEthnar" instance=ExtResource("1_vv8o7")]
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_bo7um")
+hframes = 30
+vframes = 14
+frame = 374
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("CircleShape2D_mjinq")

@@ -1,16 +1,49 @@
-[gd_scene load_steps=4 format=3 uid="uid://blqjayti4wput"]
+[gd_scene load_steps=7 format=3 uid="uid://blqjayti4wput"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_qqotj"]
-[ext_resource type="Texture2D" uid="uid://4smx3ckfdmi8" path="res://pixel art/characters/npc/MC_Idle.png" id="2_xbpm5"]
-[ext_resource type="Resource" uid="uid://dlm0h8n6myndu" path="res://dialogue/vadomere.dialogue" id="3_g0804"]
+[ext_resource type="Texture2D" uid="uid://bje6djsm5hmpx" path="res://pixel art/characters/player/MC_Idle.png" id="2_mf14r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_62o5f"]
+atlas = ExtResource("2_mf14r")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xe7lf"]
+atlas = ExtResource("2_mf14r")
+region = Rect2(16, 32, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lks0f"]
+atlas = ExtResource("2_mf14r")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tp8kk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_62o5f")
+}],
+"loop": true,
+"name": &"Idle_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xe7lf")
+}],
+"loop": true,
+"name": &"Idle_Side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lks0f")
+}],
+"loop": true,
+"name": &"Idle_Up",
+"speed": 5.0
+}]
 
 [node name="Vadomere" instance=ExtResource("1_qqotj")]
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_xbpm5")
-region_rect = Rect2(16, 0, 16, 32)
-
-[node name="Interaction" parent="." index="2"]
-dialogue_resource = ExtResource("3_g0804")
-
-[editable path="Interaction"]
+[node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_tp8kk")
