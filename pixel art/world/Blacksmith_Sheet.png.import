@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0a1dbn4vkm5"
-path="res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"
+uid="uid://c12wfytg5vx5n"
+path="res://.godot/imported/Blacksmith_Sheet.png-2dbffaad6bf4802c0b7af85c31b59886.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/characters/npc/Rancent_Idle.png"
-dest_files=["res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"]
+source_file="res://pixel art/world/Blacksmith_Sheet.png"
+dest_files=["res://.godot/imported/Blacksmith_Sheet.png-2dbffaad6bf4802c0b7af85c31b59886.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0a1dbn4vkm5"
-path="res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"
+uid="uid://btxlwbyhbuavp"
+path="res://.godot/imported/Campsite_Sheet.png-3db0084eb0b124c1bc28224a387f77f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/characters/npc/Rancent_Idle.png"
-dest_files=["res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"]
+source_file="res://pixel art/world/Campsite_Sheet.png"
+dest_files=["res://.godot/imported/Campsite_Sheet.png-3db0084eb0b124c1bc28224a387f77f2.ctex"]
 
 [params]
 

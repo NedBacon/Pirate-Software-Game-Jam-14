@@ -1,8 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://bq7mt1fgmubos"]
+[gd_scene load_steps=7 format=3 uid="uid://bq7mt1fgmubos"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_18pa7"]
 [ext_resource type="Texture2D" uid="uid://ss7owher3gvq" path="res://pixel art/characters/npc/Yarrwick_Idle.png" id="2_gegqq"]
-[ext_resource type="Resource" uid="uid://dd85txiugxtb5" path="res://dialogue/yarrwick.dialogue" id="3_qiti0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nr3iq"]
 atlas = ExtResource("2_gegqq")
@@ -43,18 +42,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jiel3"]
-radius = 6.0
-height = 32.0
-
 [node name="Yarrwick" instance=ExtResource("1_18pa7")]
 
 [node name="AnimatedSprite2D" parent="." index="0"]
+position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_aj62w")
 autoplay = ""
-
-[node name="CollisionShape2D" parent="." index="1"]
-shape = SubResource("CapsuleShape2D_jiel3")
-
-[node name="Interaction" parent="." index="2"]
-dialogue_resource = ExtResource("3_qiti0")

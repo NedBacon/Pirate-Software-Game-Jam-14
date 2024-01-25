@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0a1dbn4vkm5"
-path="res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"
+uid="uid://72dq6wpqp7wt"
+path="res://.godot/imported/Tileset_Ground_1.png-8e01e728835393f7d2dc8cb454a2186b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/characters/npc/Rancent_Idle.png"
-dest_files=["res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"]
+source_file="res://pixel art/world/Tileset_Ground_1.png"
+dest_files=["res://.godot/imported/Tileset_Ground_1.png-8e01e728835393f7d2dc8cb454a2186b.ctex"]
 
 [params]
 

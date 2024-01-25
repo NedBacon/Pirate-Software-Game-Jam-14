@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n0a1dbn4vkm5"
-path="res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"
+uid="uid://vefvy111f6h0"
+path="res://.godot/imported/Houses_And_Quest_Items.png-1e43592426d6d86d5e204987407d3422.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel art/characters/npc/Rancent_Idle.png"
-dest_files=["res://.godot/imported/Rancent_Idle.png-121bb05a64aaea466d0dcf2d92ba4378.ctex"]
+source_file="res://pixel art/world/Houses_And_Quest_Items.png"
+dest_files=["res://.godot/imported/Houses_And_Quest_Items.png-1e43592426d6d86d5e204987407d3422.ctex"]
 
 [params]
 
