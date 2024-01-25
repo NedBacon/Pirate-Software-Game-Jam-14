@@ -1,7 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://wo4m3tddse46"]
+[gd_scene load_steps=8 format=3 uid="uid://0ivk0px3y4nh"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_aivdx"]
-[ext_resource type="Texture2D" uid="uid://e0a2rm717wl7" path="res://pixel art/characters/npc/Luminary_Gwendyl_Idle.png" id="2_lnold"]
+[ext_resource type="Texture2D" uid="uid://mv8hmb5xs5jr" path="res://pixel art/characters/npc/Luminary_Gwendyl_Idle.png" id="2_lnold"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cnn0h"]
 atlas = ExtResource("2_lnold")
@@ -43,10 +43,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bupr4"]
+radius = 8.0
 height = 32.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_llox8"]
-radius = 24.0
 
 [node name="Luminary_Gwendyl" instance=ExtResource("1_aivdx")]
 
@@ -55,6 +53,3 @@ sprite_frames = SubResource("SpriteFrames_lmllv")
 
 [node name="CollisionShape2D" parent="." index="1"]
 shape = SubResource("CapsuleShape2D_bupr4")
-
-[node name="CollisionShape2D" parent="Interaction" index="0"]
-shape = SubResource("CircleShape2D_llox8")

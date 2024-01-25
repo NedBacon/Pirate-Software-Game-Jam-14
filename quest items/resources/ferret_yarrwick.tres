@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="QuestItem" load_steps=2 format=3 uid="uid://8ukbxn12yke8"]
+
+[ext_resource type="Script" path="res://quest items/quest_item.gd" id="1_j6h5o"]
+
+[resource]
+script = ExtResource("1_j6h5o")
+name = "Yarrwick's Ferret"

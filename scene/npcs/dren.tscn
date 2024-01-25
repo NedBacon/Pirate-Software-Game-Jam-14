@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://qrajn78wd3mv"]
+[gd_scene load_steps=9 format=3 uid="uid://k4ad1oglqcam"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_2h4c6"]
 [ext_resource type="Texture2D" uid="uid://0paremq66m7g" path="res://pixel art/characters/npc/Dren_Idle.png" id="2_q8n44"]

@@ -9,9 +9,9 @@ const SPEED = 100.0
 
 var input_direction : Vector2 = Vector2.ZERO
 var last_direction : int
-var quest_items = []
 
 func _physics_process(_delta):
+	print(Quests.ferret_yarrwick)
 	#Get Input directon
 	input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * SPEED

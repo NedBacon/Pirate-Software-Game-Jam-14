@@ -1,0 +1,17 @@
+~ Yarrwick
+
+if ferret_yarrwick == false
+	set ferret_yarrwick = true
+	Maeve: ( This little fella was a pain to catch for Yarrwick! )
+Maeve: ( I must bring him back to Yarrwick!)
+
+=> END
+
+~ RancentAle
+
+if ale_rancent == false
+	set ale_rancent = true
+	Maeve: ( Finally! An ice cold mug of ale for Rancent! )
+Maeve: (I must bring it back to Rancent!)
+
+=> END

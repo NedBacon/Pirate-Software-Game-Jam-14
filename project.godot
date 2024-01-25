@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pirate-software-game-jam-14"
-run/main_scene="res://scene/maps/town_layout.tscn"
+run/main_scene="res://town_layout.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -19,11 +19,12 @@ config/icon="res://icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Global="*res://globals/Global.gd"
-Quest="*res://globals/Quest.gd"
+Quests="*res://globals/Quests.gd"
 
 [dialogue_manager]
 
 general/balloon_path="res://dialogue/balloon.tscn"
+general/states=["Quest", "Global", "QuestItemBase", "QuestItem", "Quests"]
 
 [display]
 
@@ -76,7 +77,7 @@ skip_dialogue={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/yarrwick.dialogue", "res://dialogue/vadomere.dialogue", "res://dialogue/rancent.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/yarrwick.dialogue", "res://dialogue/vadomere.dialogue", "res://dialogue/rancent.dialogue", "res://dialogue/quest_item_added.dialogue")
 
 [layer_names]
 
@@ -84,6 +85,7 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/yarrwick.dialogu
 2d_physics/layer_2="npc"
 2d_physics/layer_3="enviroment/world"
 2d_physics/layer_4="interaction"
+2d_physics/layer_5="items"
 
 [rendering]
 
