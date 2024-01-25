@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://w3bepqupruyd"]
+
+[node name="QuestItemBase" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+debug_color = Color(0, 0.584314, 0.137255, 0.419608)

@@ -1,0 +1,109 @@
+~ Start
+
+Rancent: ( Who is that through the embers? Young Maeve? )
+Rancent: Present yourself!
+Rancent: Might I help you with my wares? I'm very busy, you see.
+- ( He's serious, I'd better straighten up. But I wonder about that empty cradle in the corner... )
+	Maeve: I need to ask you a question...
+	- ...you know The Messenger of Lord Wendell?
+		Maeve: You know The Messenger of Lord Wendell, right?
+		Maeve: He would never take my warning seriously, and I need your help. Pretty please?
+		Rancent: He's a tough shell to crack, truly.
+		Rancent: My regrets, but today my duties weigh heavily upon me.
+		Rancent: I extend my sincerest apologies.
+		Maeve: ( Man, this place is a wreck. )
+		Maeve: Can I lend you my hand to help in the shop? I'm a super fast learner.
+		Rancent: ...
+		Maeve: I strung my lute at 10 moons old, first try! Honest.
+		Rancent: I don't normally tolerate audacity. Yet today...
+		Rancent: Your help would be a great blessing.
+		=> iron_sharpens_iron_start
+	- ...is your family out of Kess?
+		Maeve: Is your family traveling or something? I see that empty cradle in the corner.
+		Rancent: Observant.
+		Rancent: The pressure of my duties... I've overlooked getting my daughter a doll for her name day.
+		Maeve: It would honor me to run this errand for you.
+		Rancent: Maeve, what a kind offer. Take this pouch of coins. Find one at the market.
+		- < Name Day > Takes a Extensive amount of time to complete.
+		    => END
+- ( Like I'm not important enough for this guy? )
+	Maeve: Stop your banging and listen up!
+	Rancent: This banging is important. It can surely wait.
+	Maeve: Important? This is the safety of the village! Real danger!
+	Maeve: I can't be bothered to wait on your fancy sword!
+	Rancent: A man's work in the forge is very much real. Respect it. See me later.
+	Maeve: Later? Don't you get it, we're all in peril! You're just hammering away!
+	Rancent: I don't see Faragon's forces. And what better protection for the village than a sword?
+	Rancent: And so I hammer away.
+	Maeve: Fine! Just don't say I didn't warn you!
+	Maeve: I'll find someone who actually cares about these people!
+	Rancent: Be gone, then!
+	=> yearning_for_ale_start
+
+~ iron_sharpens_iron_start
+
+Rancent: I humbly request your aid in honing my skill...
+...in teaching.
+Maeve: Is this the blade I'm helping you finish?
+Rancent: It is made out of gratitude toward The Messenger for aiding my wife's Cinder Spice sales to Lord Wendell.
+Maeve: ( A thank you sword! And I can't even stand thank you letters... )
+Rancent: First, we will temper this blade. The key is in the timing; watch closely...
+- < Iron Sharpens Iron> Takes an Extensive amount of time to complete.
+	=> iron_sharpens_iron_complete
+
+~ iron_sharpens_iron_complete
+
+Rancent: Remember, Maeve: the metal is coaxed, not coerced.
+Maeve: Maybe I'll stop by again after this whole curse thing is over.
+Rancent: And perhaps a new calling awaits you. Your hands exhibit remarkable talent.
+Rancent: I'll leave you with this, Maeve.
+Rancent: Iron sharpens iron. So a friend sharpens the countenance of another.
+- < Iron Sharpens Iron> is complete.
+	=> END
+
+~ name_day_active
+
+Rancent: A doll from the merchant shop, down the path and to the left.
+=> END
+
+~ name_day_complete
+
+Maeve: I present you a rare doll crafted by, "The Maiden of the Willows."
+Rancent: My dearest daughter, Maggie Quinn will be delighted with your selection.
+Maeve: Family is your heart. Protect them Rancent. Flee to Yeth-tarre Castle with them!
+Maeve: With your help I can gain the ear of The Messenger. 
+Maeve: Oh... and one more thing. I ran into Ned Eitch while shopping. 
+Rancent: The Grand Merchant...
+Maeve: He speaks highly of you. 
+Maeve: He came across some Throbossian ore and wanted your assessment on it.
+Rancent: The rarest of rares, Maeve. This will certainly garner the attention of The Messenger.
+- < Name Day > is complete.
+	=> END
+
+~ yearning_for_ale_start
+
+Maeve: ( Wait! What am I just doing, leaving him here? )
+Maeve: ( I need his trust more than anyone! But how to get it? )
+Maeve: ( Those mugs of ale he had stacked up are just like the ones in the tavern. )
+Maeve: ( Maeve, you've done it again! I'll go on an ale run for him, then he'll have to listen to me! )
+- < Yearning for Ale > Takes a Generous amount of time to complete.
+	=> END
+
+~ yearning_for_ale_complete
+
+Maeve: Rancent.
+Rancent: ...
+Maeve: My sincerest apologies for my behavior earlier. It was unwarranted.
+Maeve: Here is a token of my appreciation of your hard work.
+Rancent: ...
+Rancent: It takes courage to humble yourself. A trait most don't have.
+Rancent: Time to cool this blade. The ale you gift me is impeccable.
+Maeve: As the village leader, you know The Messenger, right?
+Rancent: The blade I am crafting is for him, in fact.
+Maeve: So... when he stops by your shop you'll give him my warning?
+Rancent: Hmph. Nothing's breached our tree line yet.
+Rancent: ( But my deserting House of Vaylen... )
+Rancent: ( The sacrifices I've made... )
+Rancent: Okay, Maeve. I'll see what I can do.
+- < Yearning for Ale > is complete.
+	=> END

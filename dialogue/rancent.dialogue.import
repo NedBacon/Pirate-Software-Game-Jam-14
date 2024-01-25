@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://d30hqet3ff26o"
+path="res://.godot/imported/rancent.dialogue-cea9c079104ab141d0666b2a79895cbb.tres"
+
+[deps]
+
+source_file="res://dialogue/rancent.dialogue"
+dest_files=["res://.godot/imported/rancent.dialogue-cea9c079104ab141d0666b2a79895cbb.tres"]
+
+[params]
+
+defaults=true

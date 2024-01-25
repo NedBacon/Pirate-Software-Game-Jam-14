@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dd85txiugxtb5"
+path="res://.godot/imported/yarrwick.dialogue-a26b81d68b1196ea0a191de2629abaae.tres"
+
+[deps]
+
+source_file="res://dialogue/yarrwick.dialogue"
+dest_files=["res://.godot/imported/yarrwick.dialogue-a26b81d68b1196ea0a191de2629abaae.tres"]
+
+[params]
+
+defaults=true
