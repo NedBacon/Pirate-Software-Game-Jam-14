@@ -7,6 +7,9 @@ var ferret_yarrwick:bool = false
 var quiver_ethnar:bool = false
 var satchel_cyotin:bool = false
 
+# Information is treated the same, this is set in messenger.dialogue
+var finished_vadomere: bool = false
+
 # Quest states vvv
 # unknown, active, completed
 
@@ -29,4 +32,8 @@ var collateral = "unknown"
 
 # Ethnar's Quests
 var two_witnesses = "unknown"
-var the_witnesses = "unknown"
+var the_witness = "unknown"
+
+# Gwendyl's Quests
+var wishes_of_the_well = "unknown"
+var something_in_common = "unknown"

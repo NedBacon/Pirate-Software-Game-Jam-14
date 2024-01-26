@@ -16,21 +16,23 @@ func _physics_process(_delta):
 	if !Global.is_chatting:
 		input_direction = Input.get_vector("left", "right", "up", "down")
 		velocity = input_direction * SPEED
+	else :
+		velocity = Vector2(0, 0)
 	# Move and Slide function uses velicoty of charcter body to move character on map
 	move_and_slide()
 	update_animation()
 	start_chat()
 	
 func update_animation():
-	if input_direction.x != 0 || input_direction.y != 0:
-		update_facing_direction()
-	else:
+	if((input_direction.x == 0 && input_direction.y == 0) || Global.is_chatting) :
 		if last_direction == 0:
 			animated_sprite.play("Idle")
 		elif last_direction == 1:
 			animated_sprite.play("Idle_Side")
 		else:
 			animated_sprite.play("Idle_Up")
+	else:
+		update_facing_direction()
 
 func update_facing_direction():
 	if input_direction.x < 0:
@@ -59,10 +61,8 @@ func update_facing_direction():
 
 func start_chat():
 	if !Global.is_chatting:
-		if Input.is_action_just_pressed("interaction"):
-			Global.is_chatting = true
-			var interactable = interaction_finder.get_overlapping_areas()
-			if interactable.size() > 0:
-				interactable[0].action()
-				return
-
+		var interactable = interaction_finder.get_overlapping_areas()
+		if Input.is_action_just_pressed("interaction") && interactable.size() > 0:
+			Global.enter_dialogue()
+			interactable[0].action()
+			return

@@ -6,8 +6,11 @@ const Balloon = preload("res://dialogue/small_balloon.tscn")
 @export var dialogue_start: String = ""
 
 func _on_body_entered(body):
-		action()
-		queue_free()
+	if(Global.is_chatting) :
+		return
+	Global.enter_dialogue()
+	action()
+	queue_free()
 
 func action() -> void:
 	var balloon: Node = Balloon.instantiate()

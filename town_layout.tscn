@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bfkpsfqox8bgj"]
+[gd_scene load_steps=24 format=3 uid="uid://bfkpsfqox8bgj"]
 
 [ext_resource type="Texture2D" uid="uid://cdojl4gxis845" path="res://icon - Copie.svg" id="1_vqu8y"]
 [ext_resource type="Texture2D" uid="uid://d3vx3xi5hkg2c" path="res://pixel art/world/pebble_path.png" id="2_xhetb"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cpu3x8ae0fqlm" path="res://quest items/ferret_yarrwick.tscn" id="7_3ghuv"]
 [ext_resource type="PackedScene" uid="uid://dow3rlwcbce77" path="res://quest items/quiver_ethnar.tscn" id="8_kfeae"]
 [ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="9_2867i"]
+[ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="10_o3hje"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ducov"]
 texture = ExtResource("1_vqu8y")
@@ -306,9 +307,6 @@ shape = SubResource("RectangleShape2D_kddhj")
 position = Vector2(55, 58)
 collision_mask = 6
 
-[node name="Yarrwick" parent="." instance=ExtResource("4_ci44g")]
-position = Vector2(202, 39)
-
 [node name="AleRancent" parent="." instance=ExtResource("6_a4sko")]
 position = Vector2(101, 69)
 
@@ -323,3 +321,9 @@ position = Vector2(211, 74)
 
 [node name="SatchelCyotin" parent="." instance=ExtResource("9_2867i")]
 position = Vector2(238, 70)
+
+[node name="Yarrwick" parent="." instance=ExtResource("4_ci44g")]
+position = Vector2(205, 45)
+
+[node name="Vadomere" parent="." instance=ExtResource("10_o3hje")]
+position = Vector2(162, 219)
