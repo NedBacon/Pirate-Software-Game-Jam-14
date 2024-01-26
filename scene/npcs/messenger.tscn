@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://d7u35wb04c6v"]
+[gd_scene load_steps=8 format=3 uid="uid://cayr6so0f8tq7"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_oyf50"]
-[ext_resource type="Texture2D" uid="uid://cnuwf1co2ovcy" path="res://pixel art/characters/npc/Messenger_Idle.png" id="2_kv1ap"]
+[ext_resource type="Texture2D" uid="uid://dtyf0u1fl6oli" path="res://pixel art/characters/npc/Messenger_Idle.png" id="2_kv1ap"]
 [ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="2_q0nbb"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sxcb"]

@@ -3,12 +3,12 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 var wait5 = 0
-var test = 60
+var test = 1
 var finished_chatting = false
 
 func _ready():
 	position.x = 120
-	position.y = 172
+	position.y = 220
 	pass
 
 func _physics_process(delta):
