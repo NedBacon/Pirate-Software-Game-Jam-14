@@ -1,45 +1,76 @@
 ~ Start
 
-Rancent: ( Who is that through the embers? Young Maeve? )
-Rancent: Present yourself!
-Rancent: Might I help you with my wares? I'm very busy, you see.
-- Maeve: ( He's serious; I should mend my ways. Yet, my curiosity lingers on that vacant cradle in the corner... )
-	Maeve: I have a question to pose...
-	- ...you know The Messenger of Lord Wendell?
-		Maeve: You know The Messenger of Lord Wendell?
-		Maeve: He has not taken my warning seriously, and I need your help!
-		Rancent: He's a tough shell to crack, truly.
-		Rancent: My regrets, but today my duties weigh heavily upon me.
-		Rancent: I extend my sincerest apologies.
-		Maeve: ( Goodness, this place is in utter disarray. )
-		Maeve: Can I lend you my hand to help in the shop? I'm a fast learner.
-		Rancent: ...
-		Maeve: I strung my lute at 10 moons old, first try! Honest.
-		Rancent: I don't normally tolerate audacity. Yet today...
-		Rancent: Your help would be a great blessing.
-		=> iron_sharpens_iron_start
-	- ...is your family out of Kess?
-		Maeve: Is your family on a journey? I see that empty cradle in the corner.
-		Rancent: Observant.
-		Rancent: The pressure of my duties... I've overlooked getting my daughter a doll for her name day.
-		Maeve: It would honor me to run this errand for you.
-		Rancent: Maeve, what a kind offer. Take this pouch of coins. Find one at the market.
-		- < Name Day > Takes a Extensive amount of time to complete.
-		    => END
-- Maeve: ( My company alone should persuade him to grant me an audience )
-	Maeve: Cease the clamor and lend me your attention!
-	Rancent: My work is of the utmost importance.
-	Maeve: Important? This is the safety of the village! Real danger!
-	Maeve: I can't be bothered to wait on your fancy sword!
-	Rancent: Give due regard to a man's labor at the forge. 
-	Rancent: Acknowledge its authenticity. We'll discuss further later.
-	Maeve: Later? Don't you get it, we're all in peril! You're just hammering away!
-	Rancent: I don't see Faragon's forces. And what better protection for the village than a sword?
-	Rancent: And so I hammer away.
-	Maeve: Fine! Just don't say I didn't warn you!
-	Maeve: I'll find someone who actually cares about these people!
-	Rancent: Be gone, then!
-	=> yearning_for_ale_start
+if iron_sharpens_iron == "completed"
+	=> any_quest_completed
+	
+if name_day == "completed" 
+	=> any_quest_completed
+	
+if yearning_for_ale == "completed"
+	=> any_quest_completed
+	
+if name_day == "active" and doll_rancent == false
+	=> quest_active
+	
+if  name_day == "active" and doll_rancent == true
+	=> name_day_complete
+
+if yearning_for_ale == "active" and ale_rancent == false
+	=> quest_active
+	
+if yearning_for_ale == "active" and ale_rancent == true
+	=> yearning_for_ale_complete
+
+
+if iron_sharpens_iron or name_day or yearning_for_ale == "unknown"
+	Rancent: ( Who is that through the embers? Young Maeve? )
+	Rancent: Present yourself!
+	Rancent: Might I help you with my wares? I'm very busy, you see.
+	- Maeve: ( He's serious; I should mend my ways. Yet, my curiosity lingers on that vacant cradle in the corner... )
+		Maeve: I have a question to pose...
+		- ...you know The Messenger of Lord Wendell?
+			Maeve: You know The Messenger of Lord Wendell?
+			Maeve: He has not taken my warning seriously, and I need your help!
+			Rancent: He's a tough shell to crack, truly.
+			Rancent: My regrets, but today my duties weigh heavily upon me.
+			Rancent: I extend my sincerest apologies.
+			Maeve: ( Goodness, this place is in utter disarray. )
+			Maeve: Can I lend you my hand to help in the shop? I'm a fast learner.
+			Rancent: ...
+			Maeve: I strung my lute at 10 moons old, first try! Honest.
+			Rancent: I don't normally tolerate audacity. Yet today...
+			Rancent: Your help would be a great blessing.
+			set iron_sharpens_iron = "active"
+			set is_chatting = false
+			=> iron_sharpens_iron_start
+			
+		- Maeve: ...is your family out of Kess?
+			Maeve: Is your family on a journey? I see that empty cradle in the corner.
+			Rancent: Observant.
+			Rancent: The pressure of my duties... I've overlooked getting my daughter a doll for her name day.
+			Maeve: It would honor me to run this errand for you.
+			Rancent: Maeve, what a kind offer, you can find that doll on the market.
+			- < Name Day > Takes a Extensive amount of time to complete.
+			set name_day = "active"
+			set is_chatting = false
+			=> END
+			
+	- Maeve: ( My company alone should persuade him to grant me an audience )
+		Maeve: Cease the clamor and lend me your attention!
+		Rancent: My work is of the utmost importance.
+		Maeve: Important? This is the safety of the village! Real danger!
+		Maeve: I can't be bothered to wait on your fancy sword!
+		Rancent: Give due regard to a man's labor at the forge. 
+		Rancent: Acknowledge its authenticity. We'll discuss further later.
+		Maeve: Later? Don't you get it, we're all in peril! You're just hammering away!
+		Rancent: I don't see Faragon's forces. And what better protection for the village than a sword?
+		Rancent: And so I hammer away.
+		Maeve: Fine! Just don't say I didn't warn you!
+		Maeve: I'll find someone who actually cares about these people!
+		Rancent: Be gone, then!
+		set yearning_for_ale = "active"
+		set is_chatting = false
+		=> yearning_for_ale_start
 
 ~ iron_sharpens_iron_start
 
@@ -60,11 +91,16 @@ Rancent: And perhaps a new calling awaits you. Your hands exhibit remarkable tal
 Rancent: I'll leave you with this, Maeve.
 Rancent: Iron sharpens iron. So a friend sharpens the countenance of another.
 - < Iron Sharpens Iron > is complete.
+	set is_chatting = false
+	set trust_level += 10
+	set time_to_spell -= 45
+	set iron_sharpens_iron = "completed"
 	=> END
 
-~ name_day_active
+~ quest_active
 
-Rancent: A doll from the merchant's shop.
+Rancent: Very busy, did you get the doll yet.
+set is_chatting = false
 => END
 
 ~ name_day_complete
@@ -79,6 +115,10 @@ Maeve: He speaks highly of you.
 Maeve: He came across some Throbossian ore and wanted your assessment on it.
 Rancent: The rarest of rares, Maeve. This will certainly garner the attention of The Messenger.
 - < Name Day > is complete.
+	set is_chatting = false
+	set trust_level += 10
+	set time_to_spell -= 45
+	set name_day = "completed"
 	=> END
 
 ~ yearning_for_ale_start
@@ -88,6 +128,7 @@ Maeve: ( I need his trust more than anyone! But how to get it? )
 Maeve: ( Those mugs of ale he had stacked up are like the ones from the tavern. )
 Maeve: ( Maeve, you've done it again! I'll go on an ale run for him, then he'll have to listen to me! )
 - < Yearning for Ale > Takes a Generous amount of time to complete.
+	set is_chatting = false
 	=> END
 
 ~ yearning_for_ale_complete
@@ -107,4 +148,15 @@ Rancent: ( But me deserting the House of Vaylen... )
 Rancent: ( The sacrifices I've made... )
 Rancent: Okay, Maeve. I'll see what I can do.
 - < Yearning for Ale > is complete.
+	set is_chatting = false
+	set trust_level += 5
+	set time_to_spell -= 60
+	set yearning_for_ale = "completed"
 	=> END
+	
+~ any_quest_completed
+
+Rancent: My testimony will be presented to The Messenger
+set is_chatting = false
+
+=> END

@@ -8,7 +8,7 @@ var quiver_ethnar:bool = false
 var satchel_cyotin:bool = false
 
 # Quest states vvv
-# unknown, active, achieved, complete
+# unknown, active, completed
 
 # Vadomere's Quests
 var a_fair_warning = "unknown"
