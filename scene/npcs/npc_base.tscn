@@ -20,8 +20,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ylivo"]
-radius = 7.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmo3k"]
+radius = 8.0
 
 [node name="NPC_BASE" type="CharacterBody2D"]
 
@@ -31,7 +31,6 @@ animation = &"Idle_Down"
 autoplay = "Idle_Down"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(0, -15)
-shape = SubResource("CapsuleShape2D_ylivo")
+shape = SubResource("CircleShape2D_fmo3k")
 
 [node name="Interaction" parent="." instance=ExtResource("1_mbmpf")]

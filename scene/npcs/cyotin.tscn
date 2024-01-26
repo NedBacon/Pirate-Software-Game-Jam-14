@@ -42,9 +42,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cm2lm"]
-radius = 7.0
-height = 34.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_gpck4"]
+radius = 8.0
 
 [node name="Cyotin" instance=ExtResource("1_ynvq1")]
 
@@ -53,8 +52,7 @@ position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_7v7du")
 
 [node name="CollisionShape2D2" parent="." index="1"]
-position = Vector2(0, -17)
-shape = SubResource("CapsuleShape2D_cm2lm")
+shape = SubResource("CircleShape2D_gpck4")
 
 [node name="CollisionShape2D2" parent="Interaction" index="0"]
 position = Vector2(0, -11)
