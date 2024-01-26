@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dqkdd4d4f3c3l"
+path="res://.godot/imported/cyotin.dialogue-e07acb19dde3af1e867787badc71e239.tres"
+
+[deps]
+
+source_file="res://dialogue/cyotin.dialogue"
+dest_files=["res://.godot/imported/cyotin.dialogue-e07acb19dde3af1e867787badc71e239.tres"]
+
+[params]
+
+defaults=true

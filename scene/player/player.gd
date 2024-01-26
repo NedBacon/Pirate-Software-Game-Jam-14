@@ -9,13 +9,13 @@ const SPEED = 100.0
 
 var input_direction : Vector2 = Vector2.ZERO
 var last_direction : int
-var quest_items = []
 
 func _physics_process(_delta):
+	print(Global.trust_level)
 	#Get Input directon
-	
-	input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * SPEED
+	if !Global.is_chatting:
+		input_direction = Input.get_vector("left", "right", "up", "down")
+		velocity = input_direction * SPEED
 	# Move and Slide function uses velicoty of charcter body to move character on map
 	move_and_slide()
 	update_animation()
@@ -58,8 +58,11 @@ func update_facing_direction():
 		last_direction = 2
 
 func start_chat():
-	if Input.is_action_just_pressed("interaction"):
-		var interactable = interaction_finder.get_overlapping_areas()
-		if interactable.size() > 0:
-			interactable[0].action()
-			return
+	if !Global.is_chatting:
+		if Input.is_action_just_pressed("interaction"):
+			Global.is_chatting = true
+			var interactable = interaction_finder.get_overlapping_areas()
+			if interactable.size() > 0:
+				interactable[0].action()
+				return
+

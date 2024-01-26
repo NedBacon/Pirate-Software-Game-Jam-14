@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_qqotj"]
 [ext_resource type="Texture2D" uid="uid://bje6djsm5hmpx" path="res://pixel art/characters/player/MC_Idle.png" id="2_mf14r"]
+[ext_resource type="Resource" uid="uid://dlm0h8n6myndu" path="res://dialogue/vadomere.dialogue" id="3_g0804"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_62o5f"]
 atlas = ExtResource("2_mf14r")
@@ -42,15 +43,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_lnyb5"]
-radius = 8.06226
-
 [node name="Vadomere" instance=ExtResource("1_qqotj")]
-y_sort_enabled = true
 
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_tp8kk")
 
-[node name="CollisionShape2D2" parent="." index="1"]
-shape = SubResource("CircleShape2D_lnyb5")
+[node name="Interaction" parent="." index="2"]
+dialogue_resource = ExtResource("3_g0804")

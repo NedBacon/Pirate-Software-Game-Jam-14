@@ -1,0 +1,47 @@
+~ Start
+
+Cyotin: ( Howls ) My satchel. Where is it? 
+Cyotin: On a crows lung! You in the tunic. Tone down that racket!
+- Maeve: ( Cautiously approaches Cyotin )
+	Maeve: Greetings, I am Maeve, the Bard of Petherfar, I don't think we've met.
+	Maeve: I don't mean to further anger you, the village is in danger!
+	Cyotin: I too, sensed something wicked conjuring in the air.
+	Cyotin: I've learned my intuition has deceived me.
+	Maeve: Is that the reason behind your fervent quest for your satchel?
+	Cyotin: The survival of the village is in there.
+	Cyotin: Where could it be!?
+	- Maeve: Last I've seen you was conversing with Barta at her inn. 
+		Cyotin: Is she well?
+		Maeve: Sadly, Barta was attacked by an evil spell that Silences all forms of communication!
+		Cyotin: Perhaps my intuition hasn't deceived me.
+		Cyotin: I too, fear for her. Does this curse spread?
+		Maeve: It spread from Dren to Barta. Uncertain at what progression.
+		# Start Cautiously Optimistic Quest
+	- Maeve: Why can't everything unfold smoothly right from the start? 
+		Cyotin: ( I too, recall the same frustration she has when I first arrived here )
+		Cyotin: What were you on about? You have my brief attention.
+		Maeve: I can't convince the locals of a terrible spell that will mute us all.
+		Maeve: The Messenger negates me and I can't use my lute to lull him. No magical powers.
+		Maeve: Why is the Silence of words more fearful then the thought of Faragon's invasion?
+		Cyotin: It's the Silence of empathy. Attacking our very being on what makes us alive.
+		Cyotin: Your way of life Maeve.
+		Maeve: You're the protector of this village. Help me rally them?
+		# Start Cautiously Optimistic Quest
+		
+	# Cautiously Optimistic Dialogue before getting the Quest 
+	Cyotin: My concerns are now preparing for the safety of the village.
+	Cyotin: Search for my sachel. What's in there will provide hope.
+	 - < Cautiously Optimistic > Takes a Moderate amount of time to complete.
+	
+	# Cautiously Optimistic Active
+	Cyotin: Check the parameter of the village for the Satchel, it must be around here somewhere. 
+	# End
+	
+	
+
+		
+-  Maeve: And you never been frustrated before, Jacari?
+
+=> END
+
+

@@ -45,7 +45,11 @@ Yarrwick: ...scallywags like yerself...
 Yarrwick: ...carry yer lute 'cross the plank, cast yerself into the sea...
 Yarrwick: Just wait 'til the messenger 'ears 'bout ye! 
 Maeve: Argh! Fine! I'll fetch the long rat for you!
+
+set is_chatting = false
 => END
 
 ~ good_choice
+
 => END
+
