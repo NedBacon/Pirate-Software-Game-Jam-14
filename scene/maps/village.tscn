@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://ccma81d556b4h"]
+[gd_scene load_steps=26 format=3 uid="uid://ccma81d556b4h"]
 
 [ext_resource type="Texture2D" uid="uid://vefvy111f6h0" path="res://pixel art/world/Houses_And_Quest_Items.png" id="1_5o2ph"]
 [ext_resource type="PackedScene" uid="uid://cyjdq8vg0but7" path="res://quest items/ale_rancent.tscn" id="1_bk3ce"]
@@ -10,13 +10,16 @@
 [ext_resource type="Texture2D" uid="uid://btxlwbyhbuavp" path="res://pixel art/world/Campsite_Sheet.png" id="4_o5fkd"]
 [ext_resource type="PackedScene" uid="uid://dow3rlwcbce77" path="res://quest items/quiver_ethnar.tscn" id="4_puvwj"]
 [ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="5_5g165"]
-[ext_resource type="PackedScene" uid="uid://dnqjuoxwmvfut" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
-[ext_resource type="PackedScene" uid="uid://cbtp8d7ru45o1" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
+[ext_resource type="PackedScene" uid="uid://cmm23oske5nux" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
+[ext_resource type="PackedScene" uid="uid://lp8itxxgifad" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
 [ext_resource type="PackedScene" uid="uid://c22ubp1mkfffu" path="res://scene/npcs/gwendyl.tscn" id="13_51dy4"]
 [ext_resource type="PackedScene" uid="uid://d7u35wb04c6v" path="res://scene/npcs/messenger.tscn" id="14_4clhn"]
 [ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="15_syeuj"]
 [ext_resource type="PackedScene" uid="uid://bbbuei3d0chfo" path="res://scene/npcs/rancent.tscn" id="16_rjwgp"]
 [ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="17_hqvh1"]
+[ext_resource type="VideoStream" path="res://slides/Opening-Scene.ogv" id="18_deyse"]
+[ext_resource type="Script" path="res://scene/maps/video_stream_player.gd" id="19_nhob1"]
+[ext_resource type="AudioStream" uid="uid://dydyrllhuh7f2" path="res://audio/Kess Loop.ogg" id="20_2ygm4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbofo"]
 texture = ExtResource("1_5o2ph")
@@ -433,43 +436,36 @@ y_sort_enabled = true
 z_index = 1
 y_sort_enabled = true
 position = Vector2(488, 248)
-collision_layer = 2
 
 [node name="Ethnar" parent="NPC" instance=ExtResource("7_b0qws")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(16, 504)
-collision_layer = 2
 
 [node name="Gwendyl" parent="NPC" instance=ExtResource("13_51dy4")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(456, 48)
-collision_layer = 2
 
 [node name="Messenger" parent="NPC" instance=ExtResource("14_4clhn")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(896, 256)
-collision_layer = 2
 script = null
 
 [node name="Yarrwick" parent="NPC" instance=ExtResource("15_syeuj")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(712, 136)
-collision_layer = 2
 
 [node name="Rancent" parent="NPC" instance=ExtResource("16_rjwgp")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(128, 368)
-collision_layer = 2
 
 [node name="Vadomere" parent="NPC" instance=ExtResource("17_hqvh1")]
 z_index = 1
 position = Vector2(120, 16)
-collision_layer = 2
 
 [node name="QuestItem" type="Node2D" parent="."]
 
@@ -492,5 +488,25 @@ position = Vector2(488, 328)
 [node name="SatchelCyotin" parent="QuestItem" instance=ExtResource("5_5g165")]
 y_sort_enabled = true
 position = Vector2(200, -56)
+
+[node name="Media" type="Node" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Media"]
+z_index = 10
+offset_left = -30.0
+offset_top = -115.0
+offset_right = 1506.0
+offset_bottom = 861.0
+scale = Vector2(0.33, 0.33)
+stream = ExtResource("18_deyse")
+autoplay = true
+script = ExtResource("19_nhob1")
+
+[node name="BG Music" type="AudioStreamPlayer2D" parent="Media"]
+stream = ExtResource("20_2ygm4")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="Media"]
+
+[connection signal="finished" from="Media/VideoStreamPlayer" to="Media/VideoStreamPlayer" method="_on_finished"]
 
 [editable path="player"]
