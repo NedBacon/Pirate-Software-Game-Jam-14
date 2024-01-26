@@ -1,51 +1,44 @@
 ~ Start
 
-if a_fair_warning == "active"
-	=> a_fair_warning_active
-
-if a_fair_warning == "complete"
-	=> a_fair_warning_complete
-
-if a_fair_warning == "unknown"
-	Maeve: Hey, Vado! Over here! Vadomere!
-	Maeve: Petherfar has just been attacked. I'm glad I found you first.
-	Vadomere: Impossible, Maeve! Faragon has never breached this forest.
-	Vadomere: Us Outriders have eyes in the back of our heads.
-	Maeve: ( He doesn't believe his own sister? )
-	Maeve: Listen, a dark sorcerer cast some sort of silence spell there.
-	Vadomere: Maybe you should have stayed a while, then you would finally shut up.
-	Maeve: Hey, don't be jealous just because I saw it first.
-	Maeve: What if this is part of Faragon's conquest?
-	Maeve: Keep everyone from communicating and then BAM! Wipe 'em out, y'know?
-	Vadomere: Well, all of this seems very serious.
-	- Maeve: "Surely he'll listen to reason..."
-		Maeve: I am serious! That one innkeeper. The Utlander woman who sorta runs the town?
-		Maeve: She was there. She opens her mouth but the words won't come out!
-		Vadomere: You mean my beloved Barta?? Is she well?
-		Maeve: "Beloved??" Oh là là! You two looove each other! Too bad there aren't any love letters to snoop on.
-		Vadomere: How do you mean?
-		Maeve: The Dwarf Dren, his voice was muffled, and he tried writing things down, but soon enough that was illegible, too!
-		Vadomere: Unintelligible.
-		Maeve: Huh? Is the spell here already or something?
-		Vadomere: Writing only is illegible. To describe it as well as speech, it was unintelligible.
-		Vadomere: But regardless... 
-		=> a_fair_warning_start
-	- Maeve: "I might have to get loud..."
-		Maeve: Do you need me to speak up?
-		Maeve: IS THIS LOUD ENOUGH??
-		Vadomere: Put your lute away! On a crow's lung!
-		Vadomere: You just might be the loudest one in this village.
-		Maeve: Wait! You know the locals here! Can't you help me tell everyone about this?
-		Vadomere: Not to... hmhm... harp on your strings... but what exactly did you see?
-		Maeve: ( Ugh, he's an idiot. )
-		Vadomere: ( Hah, I'm a genius. )
-		Maeve: I saw a bunch of stuff.  But the Dwarf Dren, "Drunken" Dren, "Bottomless" Dren?
-		Vadomere: Watch your tongue, Maeve.
-		Maeve: He was there, no one could understand his speech, and then his writing went, also!
-		Vadomere: ...
-		Vadomere: Are you sure he wasn't just drunk? Then again, such a situation may sober even Dren...
-		Maeve: See, it really did happen! And it'll happen here, too! 
-		=> a_fair_warning_start
+Maeve: Hey, Vado! Over here! Vadomere!
+Maeve: Petherfar has just been attacked. I'm glad I found you first.
+Vadomere: Impossible, Maeve! Faragon has never breached this forest.
+Vadomere: Us Outriders have eyes in the back of our heads.
+Maeve: ( He doesn't believe his own sister? )
+Maeve: Listen, a dark sorcerer cast some sort of silence spell there.
+Vadomere: Perhaps had you lingered a bit longer, silence would have found its way to you at last.
+Maeve: Hey, don't be jealous just because I witnessed it first.
+Maeve: What if this is part of Faragon's conquest?
+Maeve: Keep everyone from communicating and then BAM! Slay us all!
+Vadomere: Well, all of this seems very serious.
+- Maeve: "Surely he'll listen to reason..."
+	Maeve: I am serious! That one innkeeper. The Utlander woman who sorta runs the town?
+	Maeve: She was there. She opens her mouth but the words won't come out!
+	Vadomere: You mean my beloved Barta?? Is she well?
+	Maeve: "Beloved? ...I don't want to know.
+	Vadomere: How do you mean?
+	Maeve: The Dwarf Dren, his voice was muffled, and he tried writing things down, but soon enough that was illegible, too!
+	Vadomere: Unintelligible.
+	Maeve: Huh? Is the spell here already or something?
+	Vadomere: Writing only is illegible. To describe it as well as speech, it was unintelligible.
+	Vadomere: But regardless... 
+	=> a_fair_warning_start
+- Maeve: "I might have to get loud..."
+	Maeve: Do you need me to speak up?
+	Maeve: IS THIS LOUD ENOUGH??
+	Vadomere: Put your lute away! On a crow's lung!
+	Vadomere: You just might be the loudest one in this village.
+	Maeve: Wait! You know the locals here! Can't you help me tell everyone about this?
+	Vadomere: Not to... hmhm... harp on your strings... but what exactly did you see?
+	Maeve: ( Ugh, he's a fool. )
+	Vadomere: ( Huh, I'm brilliant. )
+	Maeve: I saw a bunch of stuff.  But the Dwarf Dren, "Drunken" Dren, "Bottomless" Dren?
+	Vadomere: Watch your tongue, Maeve.
+	Maeve: He was there, no one could understand his speech, and then his writing went, also!
+	Vadomere: ...
+	Vadomere: Are you sure he wasn't just drunk? Then again, such a situation may sober even Dren...
+	Maeve: See, it really did happen! And it'll happen here, too! 
+	=> a_fair_warning_start
 
 ~ a_fair_warning_start
 
@@ -55,7 +48,7 @@ Maeve: It's spreading.
 Vadomere: I see. Well this is very urgent then, isn't it?
 Maeve: It is, thank you.
 Vadomere: Hush. The Messenger of Lord Wendell, the Nessdonian, is greatly revered by the locals of Kess.
-Vadomere: He's resting here, arriving any second, in fact. If you manage to convince him--
+Vadomere: He's resting here, arriving any second, in fact. If you manage to convince him...
 Maeve: If we manage to convince him?
 Vadomere: I will be going back to the Outpost. The Outriders will need my wisdom and guidance.
 Maeve: ( How humble. )
@@ -66,26 +59,15 @@ Vadomere: Wrong, he has deep connections with many of the people here.
 Vadomere: Rancent, Cyotin, Yarrwick, Gwendyl and Ethnar.
 Vadomere: Their testimony will give him plenty of reason to trust you.
 Vadomere: Look, here he comes now, go quickly and speak to him.
-- < A Fair Warning > Takes a Short amount of time to complete.
-set is_chatting = false
-set a_fair_warning = "active"
-=> END
+- < A Fair Warning > Takes a Short amount of time to complete. => END
 
 ~ a_fair_warning_active
 
-Vadomere: Quickly, speak with The Messenger! He's just down the path. 
-set is_chatting = false
-
-=> END
+Vadomere: Quickly, speak with The Messenger! He's just down the path. => END
 
 ~ a_fair_warning_complete
 
 Vadomere: Worth a shot, I suppose. At least it provided some introduction, and a fair warning.
 Maeve: ( Funny... )
 Vadomere: I am setting off to the Outpost now. I believe in you. Go well, sister.
-- < A Fair Warning > is complete > 
-set is_chatting = false
-set trust_level += 1
-set time_to_spell -= 10
-
-=> END
+- < A Fair Warning > is complete > => END
