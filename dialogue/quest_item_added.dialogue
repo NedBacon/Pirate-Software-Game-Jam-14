@@ -27,9 +27,10 @@ Maeve: (I must bring it back to Rancent!)
 
 ~ EthnarQuiver
 
-#
-=> EthnarQuiverGood
-=> EthnarQuiverBad
+if two_witnesses == "active"
+	=> EthnarQuiverGood
+if the_witnesses == "active"
+	=> EthnarQuiverBad
 
 ~ EthnarQuiverGood
 
@@ -51,8 +52,10 @@ Maeve: (I must hurry back to Ethnar with his Quiver!)
 
 ~ CyotinSatchel
 
-=> CyotinSatchelGood
-=> CyotinSatchelBad
+if cautiously_optmistic == "active"
+	=> CyotinSatchelGood
+if collateral == "active"
+	=> CyotinSatchelBad
 
 ~ CyotinSatchelGood
 

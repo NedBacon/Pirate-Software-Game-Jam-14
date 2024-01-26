@@ -1,18 +1,17 @@
-[gd_scene load_steps=24 format=3 uid="uid://cca6hk1oisvj6"]
+[gd_scene load_steps=23 format=3 uid="uid://ccma81d556b4h"]
 
-[ext_resource type="Texture2D" path="res://pixel art/world/Houses_And_Quest_Items.png" id="1_5o2ph"]
+[ext_resource type="Texture2D" uid="uid://vefvy111f6h0" path="res://pixel art/world/Houses_And_Quest_Items.png" id="1_5o2ph"]
 [ext_resource type="PackedScene" uid="uid://cyjdq8vg0but7" path="res://quest items/ale_rancent.tscn" id="1_bk3ce"]
-[ext_resource type="Texture2D" path="res://pixel art/world/Tileset_Ground_1.png" id="2_5gb5k"]
+[ext_resource type="Texture2D" uid="uid://72dq6wpqp7wt" path="res://pixel art/world/Tileset_Ground_1.png" id="2_5gb5k"]
 [ext_resource type="PackedScene" uid="uid://kqqfa8jk35m1" path="res://quest items/doll_rancent.tscn" id="2_hct35"]
 [ext_resource type="PackedScene" uid="uid://jeb2sd14g3eg" path="res://scene/player/player.tscn" id="2_jem0t"]
 [ext_resource type="PackedScene" uid="uid://cpu3x8ae0fqlm" path="res://quest items/ferret_yarrwick.tscn" id="3_mfm25"]
-[ext_resource type="Texture2D" path="res://pixel art/world/Blacksmith_Sheet.png" id="3_yiaxe"]
-[ext_resource type="Texture2D" path="res://pixel art/world/Campsite_Sheet.png" id="4_o5fkd"]
+[ext_resource type="Texture2D" uid="uid://c12wfytg5vx5n" path="res://pixel art/world/Blacksmith_Sheet.png" id="3_yiaxe"]
+[ext_resource type="Texture2D" uid="uid://btxlwbyhbuavp" path="res://pixel art/world/Campsite_Sheet.png" id="4_o5fkd"]
 [ext_resource type="PackedScene" uid="uid://dow3rlwcbce77" path="res://quest items/quiver_ethnar.tscn" id="4_puvwj"]
 [ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="5_5g165"]
-[ext_resource type="PackedScene" uid="uid://cmm23oske5nux" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
+[ext_resource type="PackedScene" uid="uid://dnqjuoxwmvfut" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
 [ext_resource type="PackedScene" uid="uid://cbtp8d7ru45o1" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
-[ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="10_422de"]
 [ext_resource type="PackedScene" uid="uid://c22ubp1mkfffu" path="res://scene/npcs/gwendyl.tscn" id="13_51dy4"]
 [ext_resource type="PackedScene" uid="uid://d7u35wb04c6v" path="res://scene/npcs/messenger.tscn" id="14_4clhn"]
 [ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="15_syeuj"]
@@ -453,8 +452,7 @@ z_index = 1
 y_sort_enabled = true
 position = Vector2(896, 256)
 collision_layer = 2
-motion_mode = 1
-script = ExtResource("10_422de")
+script = null
 
 [node name="Yarrwick" parent="NPC" instance=ExtResource("15_syeuj")]
 z_index = 1
