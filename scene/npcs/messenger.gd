@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 100.0
 var wait5 = 0
-var test = 1
+var test = 0
 var finished_chatting = false
 
 func _ready():
