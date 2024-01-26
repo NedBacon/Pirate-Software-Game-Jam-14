@@ -5,6 +5,8 @@ if ferret_yarrwick == false
 	Maeve: ( This little fella was a pain to catch for Yarrwick! )
 Maeve: ( I must bring him back to Yarrwick!)
 
+do Global.exit_dialogue(0, -0.0)
+
 => END
 
 ~ RancentAle
@@ -13,6 +15,8 @@ if ale_rancent == false
 	set ale_rancent = true
 	Maeve: ( Finally! An ice cold mug of ale for Rancent! )
 Maeve: (I must bring it back to Rancent!)
+
+do Global.exit_dialogue(0, -0.0)
 
 => END
 
@@ -23,13 +27,15 @@ if doll_rancent == false
 	Maeve: ( Rancent's daughter will surely find delight in this one! )
 Maeve: (I must bring it back to Rancent!)
 
+do Global.exit_dialogue(0, -0.0)
+
 => END
 
 ~ EthnarQuiver
 
 if two_witnesses == "active"
 	=> EthnarQuiverGood
-if the_witnesses == "active"
+if the_witness == "active"
 	=> EthnarQuiverBad
 
 ~ EthnarQuiverGood
@@ -39,6 +45,8 @@ if quiver_ethnar == false
 	Maeve: ( Carved that perfectly!) 
 Maeve: (I must hurry back to Ethnar with his Quiver!)
 
+do Global.exit_dialogue(0, -0.0)
+
 => END
 
 ~ EthnarQuiverBad
@@ -47,6 +55,8 @@ if quiver_ethnar == false
 	set quiver_ethnar = true
 	Maeve: ( I must hurry back to Ethnar with his Quiver!)
 Maeve: (I must hurry back to Ethnar with his Quiver!)
+
+do Global.exit_dialogue(0, -0.0)
 
 => END
 
@@ -64,6 +74,8 @@ if satchel_cyotin == false
 	Maeve: ( Cyotin will be pleased I found his Satchel! )
 Maeve: (I must hurry back to Cyotin with his Satchel!)
 
+do Global.exit_dialogue(0, -0.0)
+
 => END
 
 ~ CyotinSatchelBad
@@ -72,6 +84,8 @@ if satchel_cyotin == false
 	set satchel_cyotin = true
 	Maeve: ( Cyotin's Satchel! Now he can stop worrying! )
 Maeve: (I must hurry back to Cyotin with his Satchel!)
+
+do Global.exit_dialogue(0, -0.0)
 
 => END
 

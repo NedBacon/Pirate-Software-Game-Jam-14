@@ -1,0 +1,93 @@
+~ Start
+
+if Quests.something_in_common == "completed" or Quests.wishes_of_the_well == "completed" :
+	=> any_quest_completed
+else :
+	.
+- "Hail the stars! Is it you Gwendyl?"
+	Maeve: Hail the stars! Is it you Gwendyl?
+	Gwendyl: ...and the Gibbous Moon will be late....
+	Gwendyl: Oh! Hi there, traveler! What brings you to the well?
+	Maeve: You of course! I adore your Runesilk etched robe, it sparkles on you!
+	Gwendyl: Your fine compliment honors me today.
+	Maeve: Rumor has it, The Messenger has a twinkle in his eye for you?
+	Gwendyl: ( If she only knew... )
+	Gwendyl: Rumors spread like the stars in the sky. Do you know him?
+	Maeve: Funny, what a coincidence that you should ask!
+	Maeve: He doesn't like Bards very much...
+	Maeve: How can I win his audience?
+	Gwendy: I certainly can help you. First, I'd like to know where you heard, "Hail the Stars?"
+	=> something_in_common_start
+- "We're all going to die and it's my fault"
+	Maeve: ( We're all going to die and it's my fault )
+	Maeve: I wish, that my lute can spread a magical song.
+	Gwendyl: You've come to the wrong place. I certainly can't enchant your instrument. 
+	Maeve: Then what use are you to me, Elf?
+	Gwendyl: You can take this moon pebble and...
+	Maeve: No! It doesn't matter what I do!
+	Gwendyl: Toss a moon pebble down the well and make a wish.
+	Maeve: Fine!
+	Maeve: There. Did it. What now?
+	Gwendyl: My wish when I toss my pebble is that you stop with the self deprecation.
+	Gwendyl: I may be inclined to help you if you humble yourself.
+	Maeve: Might as well.
+	Gwendyl: Help me collect the moon pebbles around and in the well.
+	Gwendyl: By that time, your wish may come true.
+	- < Wishes of the Well > takes a Substantial amount of time to complete.
+		=> wishes_of_the_well_complete
+
+~ something_in_common_start
+
+Maeve: My mother actually...
+Gwendyl: A delighted memory, I hope!
+Maeve: Truth be told, she inspired me to learn the lute.
+Maeve: Her voice was celestial... when she sung, Hail the Stars.
+Gwendyl: Have you seen my kind before?
+Maeve: Today marks a bunch of firsts for me...
+Maeve: Before she had passed, she fell in love with someone far away. 
+Maeve: Every time she received a scroll from him, she would sing, "Hail the Stars"
+Gwendyl: And what of your father?
+Maeve: He abandoned us a few moons before my Name Day.
+Gwendyl: ( I have a feeling that she ought to be informed )
+Gwendyl: Far south of here lies a magical forest where the Festival of Shadow Dance takes place.
+Gwendyl: There, the moonlight would penetrate the canopy of my forest. 
+Gwendyl: Moonflowers would shower down to the ground in an alluring display.
+Maeve: That sounds beautiful, what do you call your forest?
+Gwendyl: My ancestral home, the Moonrain Forest.
+Gwendyl: Hail the Stars is a common way of admiration where I am from.
+Gwendyl: I'm sure your mother had experienced the splendor of the Moonrain. 
+Maeve: Don't mind the tears...
+Maeve: Thank you, Luminary.
+Gwendyl: So, you want to know more about the one who wants my hand?
+- < Something in Common > takes an Acceptable amount of time.
+	=> something_in_common_complete
+	
+~ something_in_common_complete
+
+Gwendyl: You've touched my soul today, Maeve.
+Gwendyl: Allow me to inscribe a rune etch symbol on your tunic as a token from me.
+Gwendyl: The Messenger will recognize it, and he will know we have conversed.
+- < Something in Common > is complete.
+	do Global.exit_dialogue(6,-25.0)
+	set Quests.something_in_common = "completed"
+	=> END
+
+~ wishes_of_the_well_complete
+
+Maeve: ( Huh, it actually worked? The gloom dispersed! )
+Gwendyl: That's the last of it. Many thanks to you Maeve. 
+Gwendyl: Sometimes slowing down helps you reset yourself.
+Maeve: I am a Bard after all. Tone is everything. 
+Maeve: I will go forward. If you see The Messenger on your way, mention him to me, will you?
+Gwendyl: Certainly. 
+- < Wishes of the Well > is complete.
+	do Global.exit_dialogue(3,-40.0)
+	set Quests.wishes_of_the_well = "completed"
+	=> END
+
+~ any_quest_completed
+
+Gwendyl: My testimony will be presented to The Messenger.
+do Global.exit_dialogue(0, -0.0)
+
+=> END

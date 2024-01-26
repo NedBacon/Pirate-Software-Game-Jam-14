@@ -1,5 +1,18 @@
 ~ Start
 
+if Quests.a_fair_warning == "unknown" :
+	=> a_fair_warning_intro
+if Quests.a_fair_warning == "active" :
+	=> a_fair_warning_active
+if Quests.finished_vadomere:
+	=> a_fair_warning_complete
+	
+# vadomere is not interactable at this point
+if Quests.a_fair_warning == "complete" :
+	pass
+	
+~ a_fair_warning_intro
+
 Maeve: Hey, Vado! Over here! Vadomere!
 Maeve: Petherfar has just been attacked. I'm glad I found you first.
 Vadomere: Impossible, Maeve! Faragon has never breached this forest.
@@ -11,19 +24,19 @@ Maeve: Hey, don't be jealous just because I witnessed it first.
 Maeve: What if this is part of Faragon's conquest?
 Maeve: Keep everyone from communicating and then BAM! Slay us all!
 Vadomere: Well, all of this seems very serious.
-- Maeve: "Surely he'll listen to reason..."
+- "Surely he'll listen to reason..."
 	Maeve: I am serious! That one innkeeper. The Utlander woman who sorta runs the town?
 	Maeve: She was there. She opens her mouth but the words won't come out!
 	Vadomere: You mean my beloved Barta?? Is she well?
-	Maeve: "Beloved? ...I don't want to know.
-	Vadomere: How do you mean?
+	Maeve: "Beloved?" ...I don't want to know.
+	Vadomere: What else happened?
 	Maeve: The Dwarf Dren, his voice was muffled, and he tried writing things down, but soon enough that was illegible, too!
 	Vadomere: Unintelligible.
 	Maeve: Huh? Is the spell here already or something?
 	Vadomere: Writing only is illegible. To describe it as well as speech, it was unintelligible.
 	Vadomere: But regardless... 
 	=> a_fair_warning_start
-- Maeve: "I might have to get loud..."
+- "I might have to get loud..."
 	Maeve: Do you need me to speak up?
 	Maeve: IS THIS LOUD ENOUGH??
 	Vadomere: Put your lute away! On a crow's lung!
@@ -59,15 +72,27 @@ Vadomere: Wrong, he has deep connections with many of the people here.
 Vadomere: Rancent, Cyotin, Yarrwick, Gwendyl and Ethnar.
 Vadomere: Their testimony will give him plenty of reason to trust you.
 Vadomere: Look, here he comes now, go quickly and speak to him.
-- < A Fair Warning > Takes a Short amount of time to complete. => END
+- < A Fair Warning > Takes a Short amount of time to complete.
+
+set Quests.a_fair_warning = "active"
+
+do Global.exit_dialogue(0, -0.0)
+=> END
 
 ~ a_fair_warning_active
 
-Vadomere: Quickly, speak with The Messenger! He's just down the path. => END
+Vadomere: Quickly, speak with The Messenger! He's just down the path.
+
+do Global.exit_dialogue(0, -0.0)
+=> END
 
 ~ a_fair_warning_complete
 
 Vadomere: Worth a shot, I suppose. At least it provided some introduction, and a fair warning.
 Maeve: ( Funny... )
 Vadomere: I am setting off to the Outpost now. I believe in you. Go well, sister.
-- < A Fair Warning > is complete > => END
+- < A Fair Warning > is complete >
+set Quests.a_fair_warning = "complete"
+
+do Global.exit_dialogue(1, -10.0)
+=> END
