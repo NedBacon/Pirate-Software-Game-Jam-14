@@ -1,27 +1,27 @@
-[gd_scene load_steps=34 format=3 uid="uid://cca6hk1oisvj6"]
+[gd_scene load_steps=34 format=3 uid="uid://fvjgmltrmfab"]
 
-[ext_resource type="Texture2D" uid="uid://vefvy111f6h0" path="res://pixel art/world/Houses_And_Quest_Items.png" id="1_5o2ph"]
-[ext_resource type="PackedScene" uid="uid://cyjdq8vg0but7" path="res://quest items/ale_rancent.tscn" id="1_bk3ce"]
-[ext_resource type="Texture2D" uid="uid://72dq6wpqp7wt" path="res://pixel art/world/Tileset_Ground_1.png" id="2_5gb5k"]
-[ext_resource type="Texture2D" uid="uid://w6th4fova58" path="res://pixel art/world/trees.png" id="2_dtbwm"]
-[ext_resource type="PackedScene" uid="uid://kqqfa8jk35m1" path="res://quest items/doll_rancent.tscn" id="2_hct35"]
-[ext_resource type="PackedScene" uid="uid://jeb2sd14g3eg" path="res://scene/player/player.tscn" id="2_jem0t"]
-[ext_resource type="PackedScene" uid="uid://cpu3x8ae0fqlm" path="res://quest items/ferret_yarrwick.tscn" id="3_mfm25"]
-[ext_resource type="Texture2D" uid="uid://c12wfytg5vx5n" path="res://pixel art/world/Blacksmith_Sheet.png" id="3_yiaxe"]
-[ext_resource type="Texture2D" uid="uid://btxlwbyhbuavp" path="res://pixel art/world/Campsite_Sheet.png" id="4_o5fkd"]
-[ext_resource type="PackedScene" uid="uid://dow3rlwcbce77" path="res://quest items/quiver_ethnar.tscn" id="4_puvwj"]
-[ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="5_5g165"]
-[ext_resource type="PackedScene" uid="uid://cmm23oske5nux" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
-[ext_resource type="PackedScene" uid="uid://cbtp8d7ru45o1" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
-[ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="10_422de"]
-[ext_resource type="PackedScene" uid="uid://c22ubp1mkfffu" path="res://scene/npcs/gwendyl.tscn" id="13_51dy4"]
-[ext_resource type="PackedScene" uid="uid://cayr6so0f8tq7" path="res://scene/npcs/messenger.tscn" id="14_4clhn"]
-[ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="15_syeuj"]
-[ext_resource type="PackedScene" uid="uid://bbbuei3d0chfo" path="res://scene/npcs/rancent.tscn" id="16_rjwgp"]
-[ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="17_hqvh1"]
+[ext_resource type="Texture2D" uid="uid://vefvy111f6h0" path="res://pixel art/world/Houses_And_Quest_Items.png" id="1_2ydy4"]
+[ext_resource type="Texture2D" uid="uid://w6th4fova58" path="res://pixel art/world/trees.png" id="2_l6333"]
+[ext_resource type="Texture2D" uid="uid://72dq6wpqp7wt" path="res://pixel art/world/Tileset_Ground_1.png" id="3_3sxmo"]
+[ext_resource type="Texture2D" uid="uid://c12wfytg5vx5n" path="res://pixel art/world/Blacksmith_Sheet.png" id="4_b5kau"]
+[ext_resource type="Texture2D" uid="uid://btxlwbyhbuavp" path="res://pixel art/world/Campsite_Sheet.png" id="5_5dbbp"]
+[ext_resource type="PackedScene" uid="uid://jeb2sd14g3eg" path="res://scene/player/player.tscn" id="6_b6qsj"]
+[ext_resource type="PackedScene" uid="uid://cmm23oske5nux" path="res://scene/npcs/cyotin.tscn" id="7_o7f8k"]
+[ext_resource type="PackedScene" uid="uid://cbtp8d7ru45o1" path="res://scene/npcs/ethnar.tscn" id="8_b3bel"]
+[ext_resource type="PackedScene" uid="uid://c22ubp1mkfffu" path="res://scene/npcs/gwendyl.tscn" id="9_4t8d6"]
+[ext_resource type="PackedScene" uid="uid://cayr6so0f8tq7" path="res://scene/npcs/messenger.tscn" id="10_ram6t"]
+[ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="11_ebpwi"]
+[ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="12_evud4"]
+[ext_resource type="PackedScene" uid="uid://bbbuei3d0chfo" path="res://scene/npcs/rancent.tscn" id="13_7610t"]
+[ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="14_n8s7l"]
+[ext_resource type="PackedScene" uid="uid://cyjdq8vg0but7" path="res://quest items/ale_rancent.tscn" id="15_5pwa0"]
+[ext_resource type="PackedScene" uid="uid://kqqfa8jk35m1" path="res://quest items/doll_rancent.tscn" id="16_6153a"]
+[ext_resource type="PackedScene" uid="uid://cpu3x8ae0fqlm" path="res://quest items/ferret_yarrwick.tscn" id="17_nrmdc"]
+[ext_resource type="PackedScene" uid="uid://dow3rlwcbce77" path="res://quest items/quiver_ethnar.tscn" id="18_pv1jx"]
+[ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="19_pmas8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbofo"]
-texture = ExtResource("1_5o2ph")
+texture = ExtResource("1_2ydy4")
 0:0/size_in_atlas = Vector2i(5, 6)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, -8)
@@ -99,7 +99,7 @@ texture = ExtResource("1_5o2ph")
 22:2/0/physics_layer_0/polygon_1/points = PackedVector2Array(20.8596, 39.2444, 23.6881, 25.4558, 23.6881, 15.3796, 24.13, -8.66206, 37.2115, -12.5511, 56.8337, -9.54594, 61.1647, 15.3796, 64.3467, 39.598)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m3k0h"]
-texture = ExtResource("2_dtbwm")
+texture = ExtResource("2_l6333")
 0:0/size_in_atlas = Vector2i(3, 4)
 0:0/0 = 0
 0:0/0/texture_origin = Vector2i(0, 8)
@@ -159,7 +159,7 @@ texture = ExtResource("2_dtbwm")
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-13.3125, 4.25, -12.8125, 2.625, -6.4375, 3.125, -2.3125, 5, 3.5625, 2.125, 6.4375, 1.25, 10.4375, 0.375, 13.9375, 0.375, 10.4375, 4.625, 8, 5.125, 6.1875, 6, 2.0625, 6.25, 1.9375, 8, -4.8125, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h8ws7"]
-texture = ExtResource("2_5gb5k")
+texture = ExtResource("3_3sxmo")
 3:4/0 = 0
 3:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:4/0/physics_layer_0/angular_velocity = 0.0
@@ -414,7 +414,7 @@ texture = ExtResource("2_5gb5k")
 13:5/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g78vu"]
-texture = ExtResource("3_yiaxe")
+texture = ExtResource("4_b5kau")
 0:0/size_in_atlas = Vector2i(8, 6)
 0:0/next_alternative_id = 2
 0:0/animation_columns = 6
@@ -432,7 +432,7 @@ texture = ExtResource("3_yiaxe")
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-60.625, 55.5, 60.625, 55, 57.625, 44.5, 58.125, 26.75, -58.625, 26.75, -59.625, 39.75)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_edq6m"]
-texture = ExtResource("4_o5fkd")
+texture = ExtResource("5_5dbbp")
 0:0/size_in_atlas = Vector2i(4, 3)
 0:0/animation_columns = 6
 0:0/animation_frame_0/duration = 0.25
@@ -500,7 +500,7 @@ layer_2/y_sort_enabled = true
 layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(-393202, 393217, 0, -393197, 327681, 5, -327664, 1, 7, -393180, 327681, 5, -327651, 327681, 5, -327636, 393217, 0, -327628, 393217, 0, -393158, 393217, 0, -393160, 1, 0, -327626, 1, 0, -393161, 196609, 0, -327620, 131073, 4, -393155, 131073, 6, 2097212, 1, 0, 2031677, 1, 0, 2097210, 1, 0, 2097208, 1, 0, 2097206, 1, 0, 2097202, 1, 0, 2097200, 1, 0, 2097204, 1, 0, 2031668, 1, 0, 2097198, 1, 0, 2097196, 1, 0, 2097194, 1, 0, 2097192, 1, 0, 2097190, 1, 0, 2097188, 1, 0, 2097186, 1, 0, 2097184, 1, 0, 2097182, 1, 0, 2097180, 1, 0, 2097178, 1, 0, 2097176, 1, 0, 2097174, 1, 0, 2097172, 1, 0, 2097170, 1, 0, 2097168, 1, 0, 2097166, 1, 0, 2097164, 1, 0, 2097162, 1, 0, 2097160, 1, 0, 2097158, 1, 0, 2097156, 1, 0, 2097150, 1, 0, 2162687, 1, 0, 2097152, 196609, 0, 2031621, 196609, 0, 2162695, 196609, 0, 2228233, 1, 0, 2162693, 196609, 0, 2031623, 131073, 7, 2031625, 131073, 7, 2162699, 131073, 7, 2162700, 131073, 7, 2162689, 131073, 7, 2162690, 131073, 7, 2162691, 196609, 0, 1966078, 1, 0, 1900542, 196609, 0, 1835006, 196609, 0, 1769471, 1, 0, 1703937, 1, 0, 1638400, 131073, 7, 1638402, 131073, 7, 1638403, 131073, 7, 1638404, 131073, 7, 1703939, 1, 0, 1769477, 196609, 0, 1769478, 1, 0, 1703941, 1, 0, 1769480, 1, 0, 1769482, 1, 0, 1769484, 1, 0, 1769486, 1, 0, 1769488, 1, 0, 1769490, 1, 0, 1769492, 1, 0, 1769494, 1, 0, 1769496, 1, 0, 1769498, 1, 0, 1769500, 1, 0, 1769502, 1, 0, 1769504, 1, 0, 1769506, 1, 0, 1769508, 1, 0, 1769512, 1, 0, 1900585, 1, 0, 1769513, 196609, 0, 1900586, 196609, 0, 2031659, 196609, 0, 1966125, 196609, 0, 1966127, 1, 0, 1966129, 1, 0, 1900592, 196609, 0, 1835057, 196609, 0, 1835056, 196609, 0, 1835054, 196609, 0, 1835059, 196609, 0, 1966131, 1, 0, 1900597, 1, 0, 1900599, 1, 0, 1900601, 1, 0, 1900603, 1, 0, 1966133, 196609, 0, 1966135, 196609, 0, 1966139, 196609, 0, 1966137, 1, 0, 1900604, 196609, 0, 1966141, 196609, 0, 2097213, 196609, 0, 2162749, 196609, 0, 2162747, 131073, 6, 2162745, 131073, 4, 2162743, 1, 7, 2162735, 1, 7, 2097205, 1, 4, 2097203, 1, 4, 1835052, 1, 0, 1835051, 1, 4, 1900588, 1, 4, 2162741, 131073, 6, 2162739, 131073, 4, 2162737, 131073, 6, 2162729, 1, 7, 2162733, 131073, 7, 2162731, 131073, 7, 2097193, 131073, 7, 2162727, 131073, 7, 2162725, 1, 0, 2162723, 1, 0, 2228257, 1, 0, 2162719, 1, 0, 2228253, 1, 0, 2162720, 1, 0, 2228251, 1, 0, 2228249, 1, 0, 2228247, 1, 0, 2228244, 1, 0, 2228248, 1, 0, 2228250, 1, 0, 2162714, 1, 0, 2228252, 1, 0, 2293788, 1, 0, 2293782, 1, 0, 2228246, 1, 0, 2162709, 1, 0, 2162706, 1, 0, 2228242, 1, 0, 2228241, 1, 0, 2228240, 1, 0, 2228239, 1, 0, 2162703, 1, 0, 2228238, 1, 0, 2228237, 1, 0, 2228236, 1, 0, 2228235, 1, 0, 2228234, 1, 0, 2293769, 1, 0, 2228232, 1, 0, 2162696, 1, 0, 2162694, 196609, 0, 2228229, 196609, 0, 2228228, 196609, 0, 2228227, 196609, 0, 2228226, 196609, 0, 2228225, 196609, 0, 2228224, 196609, 0, 2293759, 1, 0, 2228231, 196609, 0, 2228230, 1, 0, 2228222, 196609, 0, 1835015, 131073, 6, 1835019, 131073, 6, 1835017, 131073, 7, 1703949, 131073, 7, 1769487, 196609, 0, 1769485, 196609, 0, 1835025, 131073, 4, 1835031, 1, 7, 1835029, 1, 7, 1769491, 196609, 0, 1769497, 196609, 0, 1769499, 196609, 0, 1769495, 196609, 0, 1769501, 1, 0, 1769507, 1, 0, 1835039, 131073, 6, 1835041, 131073, 6, 1703940, 131073, 7, 1769476, 196609, 0, 1900594, 196609, 0, 1900596, 196609, 0, 1835062, 196609, 0, 1900600, 196609, 0, 1835066, 196609, 0, 1835069, 196609, 0, 1703996, 1, 0, 1572925, 1, 0, 1507388, 1, 0, 1638461, 1, 0, 1376316, 1, 0, 1245245, 1, 0, 1245243, 1, 0, 1179708, 1, 0, 852029, 1, 0, 720956, 1, 0, 589885, 1, 0, 458812, 1, 0, 393275, 1, 0, 262204, 196609, 0, 196668, 1, 0, 196670, 1, 0, 393277, 1, 0, 131134, 1, 0, 589882, 196609, 0, -65477, 196609, 0, -65476, 1, 0, -131012, 1, 0, -131011, 1, 0, -131010, 1, 0, 61, 196609, 0, 65597, 196609, 0, 65596, 196609, 0, 131129, 1, 0, -262083, 1, 0, -327619, 1, 0, -327618, 1, 0, -196549, 196609, 0, -131013, 196609, 0, 131130, 1, 0, 131131, 196609, 0, 196667, 196609, 0, 262202, 1, 0, 327738, 196609, 0, 327737, 196609, 0, 393273, 196609, 0, 589883, 1, 0, 589881, 196609, 0, 524346, 196609, 0, 458811, 196609, 0, 458809, 196609, 0, 327736, 196609, 0, 131132, 196609, 0, -262084, 196609, 0, 60, 196609, 0, 131133, 196609, 0, 327740, 196609, 0, 393276, 196609, 0, 393274, 196609, 0, 262201, 196609, 0, 196666, 196609, 0, 58, 1, 0, -393199, 1, 0, -393194, 1, 0, -262120, 1, 0, -327654, 1, 0, -393191, 1, 0, -327657, 1, 0, -262117, 1, 0, -327649, 1, 0, -393184, 1, 0, -327647, 196609, 0, -393182, 196609, 0, -393177, 196609, 0, -393176, 196609, 0, -262104, 196609, 0, -327639, 196609, 0, -393174, 196609, 0, -327641, 1, 0, -262102, 1, 0, -327634, 1, 0, -327633, 1, 0, -393169, 1, 0, -458703, 1, 0, -327631, 1, 0, -393168, 1, 0, -327630, 1, 0, -262091, 1, 0, -327623, 1, 0, -262088, 1, 0, -196551, 1, 0, -262086, 196609, 0, -458692, 196609, 0, -393156, 196609, 0, -458691, 196609, 0, -262112, 131073, 7, -262096, 131073, 7, 1638398, 1, 0, 1638399, 1, 0, 1572863, 1, 0, 1507326, 1, 0, 1507327, 1, 0, 1441791, 1, 0, 1376255, 1, 0, 1310719, 1, 0, 1310718, 1, 0, 1245182, 1, 0, 1179646, 1, 0, 1179647, 1, 0, 1114111, 1, 0, 1048575, 1, 0, 983039, 1, 0, 917503, 1, 0, 851967, 1, 0, 786431, 1, 0, 786430, 1, 0, 720894, 1, 0, 851966, 1, 0, 917502, 1, 0, 983037, 1, 0, 1048573, 1, 0, 1048574, 1, 0, 1114110, 1, 0, 1245183, 1, 0, 1048576, 1, 0, 983040, 1, 0, 917504, 1, 0, 851968, 1, 0, 720895, 1, 0, 655359, 1, 0, 524286, 1, 0, 524287, 1, 0, 458752, 1, 0, 393216, 1, 0, 458751, 1, 0, 458750, 1, 0, 393215, 1, 0, 327679, 1, 0, 262143, 1, 0, 196607, 1, 0, 131071, 1, 0, 131070, 1, 0, 65535, 1, 0, 65534, 1, 0, 196606, 1, 0, 262142, 1, 0, 327678, 1, 0, -1, 1, 0, -65537, 1, 0, -131073, 1, 0, -131074, 1, 0, -65538, 1, 0, -196608, 1, 0, -262144, 1, 0, -196609, 1, 0, -262145, 1, 0, -393216, 1, 0, -327681, 1, 0, -393217, 1, 0, -393218, 1, 0, -327682, 1, 0, -327683, 1, 0, -262146, 1, 0, -458752, 1, 0, -458751, 1, 0, -458750, 1, 0, -393214, 1, 0, -327679, 1, 0, -262142, 1, 0, -458740, 1, 0, -393204, 1, 0, -524277, 1, 0, -458736, 1, 0, -393192, 1, 0, -458729, 1, 0, -458725, 1, 0, -458726, 1, 0, -458720, 1, 0, -524255, 1, 0, -524257, 1, 0, -524267, 1, 0, -458713, 1, 0, -524250, 1, 0, -458714, 1, 0, -524247, 1, 0, -458710, 1, 0, -524242, 1, 0, -458702, 1, 0, -393162, 1, 0, 1572923, 1, 0, 1638459, 1, 0, 1638458, 1, 0, 1638457, 1, 0, 1703993, 1, 0, 1507387, 1, 0, 1441851, 1, 0, 1507386, 1, 0, 1572922, 1, 0, 1572921, 1, 0, 1703994, 1, 0, 1769530, 1, 0, 1769529, 1, 0, 1769528, 1, 0, 1769527, 1, 0, 1835064, 1, 0, 1835065, 1, 0, 1769531, 1, 0, 1769532, 1, 0, 1835068, 1, 0, 1769516, 1, 0, 1507330, 1, 0, 1507329, 1, 0, 1441793, 1, 0, 1376257, 1, 0, 1310721, 1, 0, 1245185, 1, 0, 1245186, 1, 0, 1179650, 1, 0, 1179649, 1, 0, 1245187, 1, 0, 1310723, 1, 0, 1376259, 1, 0, 1441795, 1, 0, 1507332, 1, 0, 1572868, 1, 0, 1048577, 1, 0, 983041, 1, 0, 917505, 1, 0, 524288, 1, 0, 2097163, 1, 4, 2031633, 1, 4, 2097181, 1, 4)
 
-[node name="player" parent="." instance=ExtResource("2_jem0t")]
+[node name="player" parent="." instance=ExtResource("6_b6qsj")]
 z_index = 1
 position = Vector2(120, -32)
 rotation = -0.0156829
@@ -517,68 +517,68 @@ limit_bottom = 544
 [node name="NPC" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Cyotin" parent="NPC" instance=ExtResource("6_y66ls")]
+[node name="Cyotin" parent="NPC" instance=ExtResource("7_o7f8k")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(488, 248)
 collision_layer = 2
 
-[node name="Ethnar" parent="NPC" instance=ExtResource("7_b0qws")]
+[node name="Ethnar" parent="NPC" instance=ExtResource("8_b3bel")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(32, 489)
 collision_layer = 2
 
-[node name="Gwendyl" parent="NPC" instance=ExtResource("13_51dy4")]
+[node name="Gwendyl" parent="NPC" instance=ExtResource("9_4t8d6")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(456, 48)
 collision_layer = 2
 
-[node name="Messenger" parent="NPC" instance=ExtResource("14_4clhn")]
+[node name="Messenger" parent="NPC" instance=ExtResource("10_ram6t")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(896, 256)
 collision_layer = 2
 motion_mode = 1
-script = ExtResource("10_422de")
+script = ExtResource("11_ebpwi")
 
-[node name="Yarrwick" parent="NPC" instance=ExtResource("15_syeuj")]
+[node name="Yarrwick" parent="NPC" instance=ExtResource("12_evud4")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(712, 136)
 collision_layer = 2
 
-[node name="Rancent" parent="NPC" instance=ExtResource("16_rjwgp")]
+[node name="Rancent" parent="NPC" instance=ExtResource("13_7610t")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(128, 368)
 collision_layer = 2
 
-[node name="Vadomere" parent="NPC" instance=ExtResource("17_hqvh1")]
+[node name="Vadomere" parent="NPC" instance=ExtResource("14_n8s7l")]
 z_index = 1
 position = Vector2(120, 16)
 collision_layer = 2
 
 [node name="QuestItem" type="Node2D" parent="."]
 
-[node name="AleRancent" parent="QuestItem" instance=ExtResource("1_bk3ce")]
+[node name="AleRancent" parent="QuestItem" instance=ExtResource("15_5pwa0")]
 y_sort_enabled = true
 position = Vector2(728, 376)
 
-[node name="DollRancent" parent="QuestItem" instance=ExtResource("2_hct35")]
+[node name="DollRancent" parent="QuestItem" instance=ExtResource("16_6153a")]
 y_sort_enabled = true
 position = Vector2(496, 152)
 
-[node name="FerretYarrwick" parent="QuestItem" instance=ExtResource("3_mfm25")]
+[node name="FerretYarrwick" parent="QuestItem" instance=ExtResource("17_nrmdc")]
 y_sort_enabled = true
 position = Vector2(168, 376)
 
-[node name="QuiverEthnar" parent="QuestItem" instance=ExtResource("4_puvwj")]
+[node name="QuiverEthnar" parent="QuestItem" instance=ExtResource("18_pv1jx")]
 y_sort_enabled = true
 position = Vector2(488, 328)
 
-[node name="SatchelCyotin" parent="QuestItem" instance=ExtResource("5_5g165")]
+[node name="SatchelCyotin" parent="QuestItem" instance=ExtResource("19_pmas8")]
 y_sort_enabled = true
 position = Vector2(200, -56)
 
