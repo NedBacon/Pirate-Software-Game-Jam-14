@@ -1,5 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://blqjqxitljhi7"]
 
+[ext_resource type="PackedScene" uid="uid://c01st3e526y85" path="res://scene/npcs/interaction.tscn" id="1_mbmpf"]
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_3kxtp"]
 animations = [{
 "frames": [],
@@ -21,9 +23,6 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ylivo"]
 radius = 7.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_a8qsu"]
-radius = 23.0217
-
 [node name="NPC_BASE" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -35,9 +34,4 @@ autoplay = "Idle_Down"
 position = Vector2(0, -15)
 shape = SubResource("CapsuleShape2D_ylivo")
 
-[node name="Interaction" type="Area2D" parent="."]
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Interaction"]
-position = Vector2(0, -9)
-shape = SubResource("CircleShape2D_a8qsu")
-debug_color = Color(0.203922, 0.639216, 0, 0.419608)
+[node name="Interaction" parent="." instance=ExtResource("1_mbmpf")]

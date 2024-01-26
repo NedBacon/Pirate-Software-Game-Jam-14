@@ -1,12 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cyjdq8vg0but7"]
 
 [ext_resource type="PackedScene" uid="uid://w3bepqupruyd" path="res://quest items/quest_item_base.tscn" id="1_3ciad"]
-[ext_resource type="Texture2D" path="res://pixel art/world/Houses_And_Quest_Items.png" id="2_uqivs"]
+[ext_resource type="Texture2D" uid="uid://vefvy111f6h0" path="res://pixel art/world/Houses_And_Quest_Items.png" id="2_uqivs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_il5or"]
 radius = 8.0
 
 [node name="AleRancent" instance=ExtResource("1_3ciad")]
+dialogue_start = "RancentAle"
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_uqivs")
