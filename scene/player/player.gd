@@ -13,6 +13,7 @@ var quest_items = []
 
 func _physics_process(_delta):
 	#Get Input directon
+	
 	input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * SPEED
 	# Move and Slide function uses velicoty of charcter body to move character on map
