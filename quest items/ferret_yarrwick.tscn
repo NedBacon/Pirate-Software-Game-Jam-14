@@ -8,9 +8,11 @@ radius = 8.0
 height = 32.0
 
 [node name="FerretYarrwick" instance=ExtResource("1_wumtt")]
+collision_layer = 8
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("2_iq6v4")
+flip_h = true
 hframes = 15
 vframes = 14
 frame = 189
