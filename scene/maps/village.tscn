@@ -13,11 +13,13 @@
 [ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="5_5g165"]
 [ext_resource type="PackedScene" uid="uid://cmm23oske5nux" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
 [ext_resource type="PackedScene" uid="uid://cbtp8d7ru45o1" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
+[ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="11_nxplh"]
 [ext_resource type="PackedScene" uid="uid://c22ubp1mkfffu" path="res://scene/npcs/gwendyl.tscn" id="13_51dy4"]
 [ext_resource type="PackedScene" uid="uid://cayr6so0f8tq7" path="res://scene/npcs/messenger.tscn" id="14_4clhn"]
 [ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="15_syeuj"]
 [ext_resource type="PackedScene" uid="uid://bbbuei3d0chfo" path="res://scene/npcs/rancent.tscn" id="16_rjwgp"]
 [ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="17_hqvh1"]
+[ext_resource type="PackedScene" uid="uid://djlkpr3hde0fe" path="res://globals/popup_time_trust.tscn" id="19_6hidy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbofo"]
 texture = ExtResource("1_5o2ph")
@@ -481,13 +483,6 @@ size = Vector2(3.77358, 173.529)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0nimf"]
 size = Vector2(184.575, 17.6471)
 
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_pwopb"]
-color = Color(0.309804, 0.215686, 0.207843, 0.815686)
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_5ikig"]
-color = Color(0, 0.760784, 0.905882, 1)
-thickness = 4
-
 [node name="Village" type="Node2D"]
 y_sort_enabled = true
 
@@ -528,42 +523,36 @@ y_sort_enabled = true
 z_index = 1
 y_sort_enabled = true
 position = Vector2(488, 248)
-collision_layer = 2
 
 [node name="Ethnar" parent="NPC" instance=ExtResource("7_b0qws")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(32, 489)
-collision_layer = 2
 
 [node name="Gwendyl" parent="NPC" instance=ExtResource("13_51dy4")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(456, 48)
-collision_layer = 2
 
 [node name="Messenger" parent="NPC" instance=ExtResource("14_4clhn")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(896, 256)
-collision_layer = 2
+position = Vector2(120, 220)
+script = ExtResource("11_nxplh")
 
 [node name="Yarrwick" parent="NPC" instance=ExtResource("15_syeuj")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(712, 136)
-collision_layer = 2
 
 [node name="Rancent" parent="NPC" instance=ExtResource("16_rjwgp")]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(128, 368)
-collision_layer = 2
 
 [node name="Vadomere" parent="NPC" instance=ExtResource("17_hqvh1")]
 z_index = 1
 position = Vector2(120, 16)
-collision_layer = 2
 
 [node name="QuestItem" type="Node2D" parent="."]
 
@@ -630,52 +619,9 @@ position = Vector2(599.3, -88)
 scale = Vector2(4.24001, 2.72)
 shape = SubResource("RectangleShape2D_0nimf")
 
-[node name="Popup_time_trust" type="Window" parent="."]
-transparent_bg = true
-gui_disable_input = true
-size = Vector2i(512, 32)
-unresizable = true
-borderless = true
-always_on_top = true
-transparent = true
-unfocusable = true
-content_scale_mode = 1
-content_scale_aspect = 1
-
-[node name="TextEdit" type="TextEdit" parent="Popup_time_trust"]
-custom_minimum_size = Vector2(0, 32)
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 32.0
-grow_horizontal = 2
-size_flags_horizontal = 3
-size_flags_vertical = 10
-theme_override_colors/background_color = Color(0.309804, 0.215686, 0.207843, 0.478431)
-theme_override_colors/font_readonly_color = Color(0.760784, 0.760784, 0.756863, 1)
-theme_override_font_sizes/font_size = 9
-text = "Trust : 3/25		Time left : 3h10min"
-editable = false
-context_menu_enabled = false
-shortcut_keys_enabled = false
-selecting_enabled = false
-deselect_on_focus_loss_enabled = false
-drag_and_drop_selection_enabled = false
-virtual_keyboard_enabled = false
-middle_mouse_paste_enabled = false
-language = "en"
-
-[node name="ProgressBar" type="ProgressBar" parent="Popup_time_trust"]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 4.0
-grow_horizontal = 2
-size_flags_horizontal = 3
-theme_override_styles/background = SubResource("StyleBoxLine_pwopb")
-theme_override_styles/fill = SubResource("StyleBoxLine_5ikig")
-max_value = 25.0
-step = 1.0
-value = 3.0
-allow_greater = true
-show_percentage = false
+[node name="Popup_time_trust" parent="." instance=ExtResource("19_6hidy")]
+unique_name_in_owner = true
+visible = false
 
 [editable path="player"]
+[editable path="Popup_time_trust"]
