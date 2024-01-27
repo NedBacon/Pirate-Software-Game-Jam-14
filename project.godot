@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="Pirate-software-game-jam-14"
+config/name="A Fool's Errand"
 run/main_scene="res://scene/maps/village.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://icon.svg"
+boot_splash/image="res://Title_Screen.png"
+config/icon="res://GameIcon.png"
 
 [autoload]
 
