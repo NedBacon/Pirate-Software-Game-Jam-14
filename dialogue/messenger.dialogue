@@ -1,0 +1,59 @@
+~ Start
+
+if Quests.a_fair_warning == "active" :
+	=> a_fair_warning_active
+
+if !Global.trust_level >= 25 :
+	=> havent_won
+else :
+	=> the_final_motif
+
+~ a_fair_warning_active
+
+Maeve: Excuse me sir, excuse me! I seek your attention for just a moment!
+Mesenger: Bard, I don't have time for your affairs.
+Mesenger: I am quite late to rendez-vous with Lord Edric Clemont at the stables.
+Maeve: My relief you're not in Petherfar; Faragon is coming for our voice! 
+Mesenger: Nonsense!
+Maeve: Lord Wendell of Yeth-tarre must know our communication is being attacked!
+Maeve: If we don't act soon, it may be too late to reconvene. 
+Mesenger: Bards with their fables. Nothing more than charlatans reaching for the pockets of nobles. 
+Maeve: ( My audience isn't enough? )
+- < Return back to Vadomere >
+	do Global.exit_dialogue(0, -0.0)
+	Quests.finished_vadomere = true
+	=> END
+
+~ havent_won
+
+Mesenger: I am currently engaged in counsel with Lord Clemont.
+
+~ the_final_motif
+
+Mesenger: Maeve, I am glad you caught me on my way to Yeth-Tarre.
+Mesenger: The people here speak well of you.
+Mesenger: And so, Maeve, tell me what you had witnessed...
+- < The Final Motif > Takes a Short amount of time to complete.
+	Maeve: It seems fate is on our side after all!
+	Mesenger:Hope, tales, and rumours. They spread like wildfire. We are eager to know the negative.
+	Mesenger:Sometimes our own arrogance can bulwark a convicted voice.
+	Maeve: We are not so different after all. 
+	Maeve: A Bard spreads tales through song...
+	Mesenger:... and a Messenger bears that proclamation to the Nobles and the Citizens of the Kingdom.
+	Maeve: Let the annals of time store in its heart your name long after us.
+	Mesenger:Maeve, Bard of Petherfar, let your song of this day be written in the annals.
+	Mesenger:You stood as the unwavering foundation, yielding great trust to those unfamiliar.
+	Maeve: ( He's bowing his head, I should do the same. )
+	Maeve: Shouldn't you ride to Yeth-tarre castle?
+	Mesenger:With haste, I must. Farewell Maeve.
+	Maeve: ( Hmm I didn't soil it entirely... nevertheless, the village grasps the validity of my warning... )
+	Of Fate: A rush of wind spreads the howl of Cyotin's voice...
+	Of Fate: ... as a shiver of dread lathers Maeve's spine...
+	Cyotin: Halt denizen of Petherfar! Your journey here ceases this very moment!
+	Cyotin: Th_re'_ a g_eat __il af_o_ _nd, _or__ ___t _id _o_ ___ _____
+	Maeve: ( Cyotin... no!!! )
+	( Don't tell me... that this was just a fool's errand... )
+	The Outpost...I must seek Vadomere!
+	- < Final Motif > is complete
+		do Global.exit_dialogue(0, -10.0)
+		=> END
