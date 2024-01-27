@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://0va4irrxegst"
+path="res://.godot/imported/messenger.dialogue-171082182d82b74b50ce661e6f619ea4.tres"
+
+[deps]
+
+source_file="res://dialogue/messenger.dialogue"
+dest_files=["res://.godot/imported/messenger.dialogue-171082182d82b74b50ce661e6f619ea4.tres"]
+
+[params]
+
+defaults=true

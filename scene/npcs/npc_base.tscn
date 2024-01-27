@@ -35,3 +35,4 @@ autoplay = "Idle_Down"
 shape = SubResource("CircleShape2D_fmo3k")
 
 [node name="Interaction" parent="." instance=ExtResource("1_mbmpf")]
+y_sort_enabled = true

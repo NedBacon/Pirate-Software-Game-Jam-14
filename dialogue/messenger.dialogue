@@ -1,0 +1,6 @@
+~ Start
+
+- End the conversation 
+set finished_chatting = true
+set is_chatting = false
+=> END

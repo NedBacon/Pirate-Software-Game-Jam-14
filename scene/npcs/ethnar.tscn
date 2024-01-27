@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://lp8itxxgifad"]
+[gd_scene load_steps=8 format=3 uid="uid://lp8itxxgifad"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_m2744"]
 [ext_resource type="Texture2D" uid="uid://knnspllbqyty" path="res://pixel art/characters/npc/Ethnar_Idle.png" id="2_6mi1s"]
+[ext_resource type="Resource" uid="uid://is33xptow1e4" path="res://dialogue/ethnar.dialogue" id="3_43w8o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ch4jp"]
 atlas = ExtResource("2_6mi1s")
@@ -47,3 +48,6 @@ animations = [{
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_745r0")
+
+[node name="Interaction" parent="." index="2"]
+dialogue_resource = ExtResource("3_43w8o")

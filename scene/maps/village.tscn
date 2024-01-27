@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cca6hk1oisvj6"]
+[gd_scene load_steps=33 format=3 uid="uid://cca6hk1oisvj6"]
 
 [ext_resource type="Texture2D" uid="uid://vefvy111f6h0" path="res://pixel art/world/Houses_And_Quest_Items.png" id="1_5o2ph"]
 [ext_resource type="PackedScene" uid="uid://cyjdq8vg0but7" path="res://quest items/ale_rancent.tscn" id="1_bk3ce"]
@@ -12,14 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://dow3rlwcbce77" path="res://quest items/quiver_ethnar.tscn" id="4_puvwj"]
 [ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="5_5g165"]
 [ext_resource type="PackedScene" uid="uid://cmm23oske5nux" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
-[ext_resource type="PackedScene" uid="uid://cbtp8d7ru45o1" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
-[ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="11_nxplh"]
+[ext_resource type="PackedScene" uid="uid://lp8itxxgifad" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
 [ext_resource type="PackedScene" uid="uid://c22ubp1mkfffu" path="res://scene/npcs/gwendyl.tscn" id="13_51dy4"]
 [ext_resource type="PackedScene" uid="uid://cayr6so0f8tq7" path="res://scene/npcs/messenger.tscn" id="14_4clhn"]
 [ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="15_syeuj"]
 [ext_resource type="PackedScene" uid="uid://bbbuei3d0chfo" path="res://scene/npcs/rancent.tscn" id="16_rjwgp"]
 [ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="17_hqvh1"]
-[ext_resource type="PackedScene" uid="uid://djlkpr3hde0fe" path="res://globals/popup_time_trust.tscn" id="19_6hidy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbofo"]
 texture = ExtResource("1_5o2ph")
@@ -538,7 +536,6 @@ position = Vector2(456, 48)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(120, 220)
-script = ExtResource("11_nxplh")
 
 [node name="Yarrwick" parent="NPC" instance=ExtResource("15_syeuj")]
 z_index = 1
@@ -619,9 +616,4 @@ position = Vector2(599.3, -88)
 scale = Vector2(4.24001, 2.72)
 shape = SubResource("RectangleShape2D_0nimf")
 
-[node name="Popup_time_trust" parent="." instance=ExtResource("19_6hidy")]
-unique_name_in_owner = true
-visible = false
-
 [editable path="player"]
-[editable path="Popup_time_trust"]

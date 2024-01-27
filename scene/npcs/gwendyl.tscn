@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c22ubp1mkfffu"]
+[gd_scene load_steps=8 format=3 uid="uid://c22ubp1mkfffu"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_6vhei"]
-[ext_resource type="Texture2D" uid="uid://mv8hmb5xs5jr" path="res://pixel art/characters/npc/Luminary_Gwendyl_Idle.png" id="2_q83g7"]
+[ext_resource type="Texture2D" uid="uid://e0a2rm717wl7" path="res://pixel art/characters/npc/Luminary_Gwendyl_Idle.png" id="2_q83g7"]
+[ext_resource type="Resource" uid="uid://cjv2fm735j0td" path="res://dialogue/gwendyl.dialogue" id="3_vfle8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3mtn"]
 atlas = ExtResource("2_q83g7")
@@ -47,3 +48,6 @@ animations = [{
 [node name="AnimatedSprite2D" parent="." index="0"]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_yj8ss")
+
+[node name="Interaction" parent="." index="2"]
+dialogue_resource = ExtResource("3_vfle8")

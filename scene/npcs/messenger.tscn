@@ -1,9 +1,9 @@
 [gd_scene load_steps=10 format=3 uid="uid://cayr6so0f8tq7"]
 
-[ext_resource type="Texture2D" uid="uid://dtyf0u1fl6oli" path="res://pixel art/characters/npc/Messenger_Idle.png" id="2_kv1ap"]
+[ext_resource type="Texture2D" uid="uid://cnuwf1co2ovcy" path="res://pixel art/characters/npc/Messenger_Idle.png" id="2_kv1ap"]
 [ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="2_q0nbb"]
 [ext_resource type="PackedScene" uid="uid://c01st3e526y85" path="res://scene/npcs/interaction.tscn" id="3_osst6"]
-[ext_resource type="Resource" uid="uid://c8smci8jy37ws" path="res://dialogue/rancent.dialogue" id="4_vsi4s"]
+[ext_resource type="Resource" uid="uid://0va4irrxegst" path="res://dialogue/messenger.dialogue" id="4_5nmo7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sxcb"]
 atlas = ExtResource("2_kv1ap")
@@ -61,4 +61,4 @@ autoplay = "Idle_Down"
 shape = SubResource("CircleShape2D_fmo3k")
 
 [node name="Interaction" parent="." instance=ExtResource("3_osst6")]
-dialogue_resource = ExtResource("4_vsi4s")
+dialogue_resource = ExtResource("4_5nmo7")

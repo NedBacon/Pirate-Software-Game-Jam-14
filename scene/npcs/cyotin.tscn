@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmm23oske5nux"]
+[gd_scene load_steps=9 format=3 uid="uid://cmm23oske5nux"]
 
 [ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_ynvq1"]
-[ext_resource type="Texture2D" uid="uid://bnwp7isgow5h1" path="res://pixel art/characters/npc/Cyotin_Idle.png" id="2_16xvr"]
+[ext_resource type="Texture2D" uid="uid://bupouc2hmy6yt" path="res://pixel art/characters/npc/Cyotin_Idle.png" id="2_16xvr"]
+[ext_resource type="Resource" uid="uid://dqkdd4d4f3c3l" path="res://dialogue/cyotin.dialogue" id="3_kgpys"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwauc"]
 atlas = ExtResource("2_16xvr")
@@ -53,3 +54,6 @@ sprite_frames = SubResource("SpriteFrames_7v7du")
 
 [node name="CollisionShape2D2" parent="." index="1"]
 shape = SubResource("CircleShape2D_gpck4")
+
+[node name="Interaction" parent="." index="2"]
+dialogue_resource = ExtResource("3_kgpys")
