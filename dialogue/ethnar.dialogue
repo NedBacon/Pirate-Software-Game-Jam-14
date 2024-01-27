@@ -1,0 +1,115 @@
+~ Start
+
+if two_witnesses == "unknown" and the_witness == "unknown" :
+	=> ethnar_intro
+
+if Quests.two_witnesses == "completed" or Quests.the_witness == "completed" :
+	=> any_quest_completed
+	
+if !Quests.quiver_ethnar and (Quests.two_witnesses == "active" or Quests.the_witness == "active") :
+	=> quest_active
+	
+if Quests.two_witnesses == "active" and Quests.quiver_ethnar :
+	=> two_witnesses_complete
+	
+if Quests.the_witness == "active" and Quests.quiver_ethnar :
+	=> the_witness_complete
+
+~ ethnar_intro
+
+Maeve: Who has your gaze?
+Ethnar: Shh. Do you hear it? It's deafening.
+Maeve: Hunting near the Village? 
+Ethnar: ( Whispers ) North of here. Something wicked.
+Ethnar: The birds stayed silent.
+Ethnar: One moment I heard the wind roar against the leaves, then two steps away, dead silence.
+Ethnar: I fear we are being attacked by something nefarious.
+- "I'm so relieved our paths crossed, Ethnar."
+	Maeve: I'm so relieved our paths crossed, Ethnar.
+	Maeve: I'm Maeve by the way...
+	Ethnar: My eye is deadlocked on the prey. The one who attacked us in Petherfar.
+	Etnar: He has silenced my my woodland dwelling, but he won't stifle my voice!
+	Maeve: Track him down and ensure his permanent silence!
+	Ethnar: The wage of his dark sorcery will be swift and decisive!
+	Maeve: Given that we're in agreement, I heard you're acquainted with The Messenger?
+	Ethnar: A companion of many moons, yes.
+	Ethnar: No room for idle chatter, Maeve.
+	Ethnar: Can you deliver a sign to The Messenger for me?
+	Maeve: Anything! His attention is paramount!
+	=> two_witnesses_start
+- "If you knew, then why didn't you intervene?"
+	Maeve: If you knew, then why didn't you intervene?
+	Ethnar: Consider I was surveying from another location that I could not reach?
+	Maeve: Vadomere says you're this great hunter. I think not.
+	Ethnar: The tavern near the stables could use a Bard. 
+	Ethnar: Your time is better served there.
+	Maeve: I cannot fathom the reason behind your decision to dishonor me.
+	Ethnar: I'll put in a way a Bard could understand.
+	Ethnar: You occupied the front seat, witnessing it directly, your perspective limited to what lay ahead.
+	Ethnar: I stood on the balcony, granting me a broad view of the entire scene.
+	=> the_witness_start
+
+~ quest_active
+
+Ethnar: My gaze is locked on the Sorcerer, have my quiver? 
+
+do Global.exit_dialogue(0, -0.0)
+=> END
+
+
+~ two_witnesses_start
+
+Ethnar: This is important. Listen carefully. Do exactly what I say.
+Ethnar: Fetch my second quiver at my cabin.
+Ethnar: Inscribe this symbol upon the pillar, a cipher whispered only in the ears of The Messenger and myself.
+- < Two Witnesses > Takes a Medium amount of time to complete.
+	do Global.exit_dialogue(0, 0.0)
+	set Quests.two_witnesses = "active"
+	=> END
+
+~ two_witnesses_complete
+
+Ethnar: Two quivers will be enough for this hunt!
+Ethnar: My departure is imminent. I entrust you to sway the hearts of the village regarding the attack.
+Maeve: I eagerly await your return.
+Maeve: Be safe out in that wilderness.
+Ethnar: Rest assured, I will ensure an arrow finds its mark in the throat of that Sorcerer!
+- < Two Witnesses > is complete.
+	do Global.exit_dialogue(4,-30.0)
+	set two_witnesses = "completed"
+	=> END
+	
+	
+~ the_witness_start
+
+Maeve: I'm the Bard, you're the Hunter. Let's keep it that way.
+Maeve: ( I'll show him! )
+Ethnar: Gah! Why did you play a tune? You irritated me enough already!
+Maeve: ( Compose yourself Maeve! )
+Maeve: Truly, I came here for your help.
+Ethnar: Then, show me the courtesy of my witness.
+Maeve: At least we can agree we have the same goals.
+Ethnar: I am amenable to that proposition.
+Ethnar: You can start by fetching my quiver at my cabin.
+- < The Witness > Takes a Medium amount of time to complete >
+	set the_witness = "active"
+	do Global.exit_dialogue(0, -0.0)
+	=> END
+
+~ the_witness_complete
+
+Ethnar: Have my arrows remained unscathed?
+Maeve: I tread with nimble steps...
+Ethnar: Here take this arrowhead.
+Ethnar: When The Messenger concludes his duties, he shall discern we have spoken.
+- < The Witness > is complete.
+	do Global.exit_dialogue(2,-40.0)
+	set the_witness = "completed"
+	=> END
+	
+~ any_quest_completed
+
+Ethnar: My testimony will be presented to The Messenger
+
+do Global.exit_dialogue(0, -0.0)
+=> END

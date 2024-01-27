@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Global="*res://globals/Global.gd"
 Quests="*res://globals/Quests.gd"
+Quest="*res://globals/Quest.gd"
 Messenger="*res://scene/npcs/messenger.gd"
 
 [dialogue_manager]
@@ -68,17 +69,19 @@ down={
 interaction={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
 ]
 }
 skip_dialogue={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"echo":false,"script":null)
 ]
 }
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/yarrwick.dialogue", "res://dialogue/vadomere.dialogue", "res://dialogue/rancent.dialogue", "res://dialogue/quest_item_added.dialogue", "res://dialogue/cyotin.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/yarrwick.dialogue", "res://dialogue/vadomere.dialogue", "res://dialogue/rancent.dialogue", "res://dialogue/quest_item_added.dialogue", "res://dialogue/cyotin.dialogue", "res://dialogue/gwendyl.dialogue", "res://dialogue/ethnar.dialogue")
 
 [layer_names]
 

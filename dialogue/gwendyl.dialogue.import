@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cjv2fm735j0td"
+path="res://.godot/imported/gwendyl.dialogue-a4934f9ba81640f4414b0cebf674fd42.tres"
+
+[deps]
+
+source_file="res://dialogue/gwendyl.dialogue"
+dest_files=["res://.godot/imported/gwendyl.dialogue-a4934f9ba81640f4414b0cebf674fd42.tres"]
+
+[params]
+
+defaults=true

@@ -53,6 +53,3 @@ sprite_frames = SubResource("SpriteFrames_7v7du")
 
 [node name="CollisionShape2D2" parent="." index="1"]
 shape = SubResource("CircleShape2D_gpck4")
-
-[node name="CollisionShape2D2" parent="Interaction" index="0"]
-position = Vector2(0, -11)

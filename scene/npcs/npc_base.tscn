@@ -23,7 +23,8 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_fmo3k"]
 radius = 8.0
 
-[node name="NPC_BASE" type="CharacterBody2D"]
+[node name="NPC_BASE" type="StaticBody2D"]
+collision_layer = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_3kxtp")

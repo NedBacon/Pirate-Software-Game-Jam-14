@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://djlkpr3hde0fe"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_pwopb"]
+color = Color(0.309804, 0.215686, 0.207843, 0.815686)
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_5ikig"]
+color = Color(0, 0.760784, 0.905882, 1)
+thickness = 4
+
+[node name="Popup_time_trust" type="Window"]
+transparent_bg = true
+gui_disable_input = true
+size = Vector2i(512, 32)
+unresizable = true
+borderless = true
+always_on_top = true
+transparent = true
+unfocusable = true
+content_scale_mode = 1
+content_scale_aspect = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+custom_minimum_size = Vector2(0, 32)
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 32.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+theme_override_colors/background_color = Color(0.309804, 0.215686, 0.207843, 0.478431)
+theme_override_colors/font_readonly_color = Color(0.760784, 0.760784, 0.756863, 1)
+theme_override_font_sizes/font_size = 9
+text = "Trust : 0/25		Time left : 3h10min"
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+language = "en"
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxLine_pwopb")
+theme_override_styles/fill = SubResource("StyleBoxLine_5ikig")
+max_value = 25.0
+step = 1.0
+allow_greater = true
+show_percentage = false
