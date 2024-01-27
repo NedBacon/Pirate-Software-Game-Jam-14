@@ -502,10 +502,10 @@ stream = ExtResource("18_deyse")
 autoplay = true
 script = ExtResource("19_nhob1")
 
-[node name="BG Music" type="AudioStreamPlayer2D" parent="Media"]
+[node name="BG Music" type="AudioStreamPlayer" parent="Media"]
 stream = ExtResource("20_2ygm4")
 
-[node name="SFX" type="AudioStreamPlayer2D" parent="Media"]
+[node name="SFX" type="AudioStreamPlayer" parent="Media"]
 
 [connection signal="finished" from="Media/VideoStreamPlayer" to="Media/VideoStreamPlayer" method="_on_finished"]
 
