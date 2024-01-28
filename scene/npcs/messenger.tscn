@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://d7u35wb04c6v"]
+[gd_scene load_steps=10 format=3 uid="uid://cayr6so0f8tq7"]
 
-[ext_resource type="PackedScene" uid="uid://blqjqxitljhi7" path="res://scene/npcs/npc_base.tscn" id="1_oyf50"]
-[ext_resource type="Texture2D" uid="uid://cnuwf1co2ovcy" path="res://pixel art/characters/npc/Messenger_Idle.png" id="2_kv1ap"]
+[ext_resource type="Texture2D" uid="uid://dtyf0u1fl6oli" path="res://pixel art/characters/npc/Messenger_Idle.png" id="2_kv1ap"]
 [ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="2_q0nbb"]
+[ext_resource type="PackedScene" uid="uid://c01st3e526y85" path="res://scene/npcs/interaction.tscn" id="3_osst6"]
+[ext_resource type="Resource" uid="uid://c8smci8jy37ws" path="res://dialogue/rancent.dialogue" id="4_vsi4s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5sxcb"]
 atlas = ExtResource("2_kv1ap")
@@ -43,10 +44,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Messenger" instance=ExtResource("1_oyf50")]
-motion_mode = 1
+[sub_resource type="CircleShape2D" id="CircleShape2D_fmo3k"]
+radius = 8.0
+
+[node name="Messenger" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("2_q0nbb")
 
-[node name="AnimatedSprite2D" parent="." index="0"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -16)
 sprite_frames = SubResource("SpriteFrames_jcbut")
+animation = &"Idle_Down"
+autoplay = "Idle_Down"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_fmo3k")
+
+[node name="Interaction" parent="." instance=ExtResource("3_osst6")]
+dialogue_resource = ExtResource("4_vsi4s")
