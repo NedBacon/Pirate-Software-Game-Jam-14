@@ -1,4 +1,6 @@
-[gd_scene load_steps=35 format=3 uid="uid://cca6hk1oisvj6"]
+
+[gd_scene load_steps=26 format=3 uid="uid://ccma81d556b4h"]
+
 
 [ext_resource type="Texture2D" uid="uid://vefvy111f6h0" path="res://pixel art/world/Houses_And_Quest_Items.png" id="1_5o2ph"]
 [ext_resource type="PackedScene" uid="uid://cyjdq8vg0but7" path="res://quest items/ale_rancent.tscn" id="1_bk3ce"]
@@ -12,14 +14,19 @@
 [ext_resource type="PackedScene" uid="uid://dow3rlwcbce77" path="res://quest items/quiver_ethnar.tscn" id="4_puvwj"]
 [ext_resource type="PackedScene" uid="uid://blpekv4fiji" path="res://quest items/satchel_cyotin.tscn" id="5_5g165"]
 [ext_resource type="PackedScene" uid="uid://cmm23oske5nux" path="res://scene/npcs/cyotin.tscn" id="6_y66ls"]
-[ext_resource type="PackedScene" uid="uid://cbtp8d7ru45o1" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
-[ext_resource type="Script" path="res://scene/npcs/messenger.gd" id="11_nxplh"]
+
+[ext_resource type="PackedScene" uid="uid://lp8itxxgifad" path="res://scene/npcs/ethnar.tscn" id="7_b0qws"]
+=======
 [ext_resource type="PackedScene" uid="uid://c22ubp1mkfffu" path="res://scene/npcs/gwendyl.tscn" id="13_51dy4"]
 [ext_resource type="PackedScene" uid="uid://cayr6so0f8tq7" path="res://scene/npcs/messenger.tscn" id="14_4clhn"]
 [ext_resource type="PackedScene" uid="uid://bq7mt1fgmubos" path="res://scene/npcs/yarrwick.tscn" id="15_syeuj"]
 [ext_resource type="PackedScene" uid="uid://bbbuei3d0chfo" path="res://scene/npcs/rancent.tscn" id="16_rjwgp"]
 [ext_resource type="PackedScene" uid="uid://blqjayti4wput" path="res://scene/npcs/vadomere.tscn" id="17_hqvh1"]
-[ext_resource type="PackedScene" uid="uid://djlkpr3hde0fe" path="res://globals/popup_time_trust.tscn" id="19_6hidy"]
+
+[ext_resource type="VideoStream" path="res://slides/Opening-Scene.ogv" id="18_deyse"]
+[ext_resource type="Script" path="res://scene/maps/video_stream_player.gd" id="19_nhob1"]
+[ext_resource type="AudioStream" uid="uid://dydyrllhuh7f2" path="res://audio/Kess Loop.ogg" id="20_2ygm4"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xbofo"]
 texture = ExtResource("1_5o2ph")
@@ -527,7 +534,9 @@ position = Vector2(488, 248)
 [node name="Ethnar" parent="NPC" instance=ExtResource("7_b0qws")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(32, 489)
+
+position = Vector2(16, 504)
+
 
 [node name="Gwendyl" parent="NPC" instance=ExtResource("13_51dy4")]
 z_index = 1
@@ -537,8 +546,10 @@ position = Vector2(456, 48)
 [node name="Messenger" parent="NPC" instance=ExtResource("14_4clhn")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(120, 220)
-script = ExtResource("11_nxplh")
+
+position = Vector2(896, 256)
+script = null
+
 
 [node name="Yarrwick" parent="NPC" instance=ExtResource("15_syeuj")]
 z_index = 1
@@ -576,6 +587,27 @@ position = Vector2(488, 328)
 y_sort_enabled = true
 position = Vector2(200, -56)
 
+
+[node name="Media" type="Node" parent="."]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Media"]
+z_index = 10
+offset_left = -30.0
+offset_top = -115.0
+offset_right = 1506.0
+offset_bottom = 861.0
+scale = Vector2(0.33, 0.33)
+stream = ExtResource("18_deyse")
+autoplay = true
+script = ExtResource("19_nhob1")
+
+[node name="BG Music" type="AudioStreamPlayer" parent="Media"]
+stream = ExtResource("20_2ygm4")
+
+[node name="SFX" type="AudioStreamPlayer" parent="Media"]
+
+[connection signal="finished" from="Media/VideoStreamPlayer" to="Media/VideoStreamPlayer" method="_on_finished"]
+=======
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_layer = 4
 
@@ -622,6 +654,7 @@ shape = SubResource("RectangleShape2D_0nimf")
 [node name="Popup_time_trust" parent="." instance=ExtResource("19_6hidy")]
 unique_name_in_owner = true
 visible = false
+
 
 [editable path="player"]
 [editable path="Popup_time_trust"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dydyrllhuh7f2"
+path="res://.godot/imported/Kess Loop.ogg-e4282168e024dd5b83bc99fb33089413.oggvorbisstr"
+
+[deps]
+
+source_file="res://audio/Kess Loop.ogg"
+dest_files=["res://.godot/imported/Kess Loop.ogg-e4282168e024dd5b83bc99fb33089413.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

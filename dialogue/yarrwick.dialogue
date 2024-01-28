@@ -1,18 +1,102 @@
 ~ Start
 
-Yarrwick: [[Yoho|Ahoy]]! That lute and those clothes--ye be a bard.
-Yarrwick: Come here to best me tales? Argh! Don't bother! Listen and be amazed!
-Yarrwick: Perhaps I can entice ye with me favorite, The Lady of the Sea? No?
+if Quests.long_rat_quest == "unknown" and Quests.the_riddle == "unknown" and Quests.stay_a_while == "unknown"
+	=> yarrwick_intro
+if Quests.long_rat_quest == "active" and !Quests.ferret_yarrwick
+	=> long_rat_active
+if Quests.long_rat_quest == "active" and Quests.ferret_yarrwick
+	=> long_rat_complete
+
+~ yarrwick_intro
+
+Yarrwick: Ahoy! That lute and those clothes--ye be a bard.
+Yarrwick: Come 'ere t' best me tales? Argh! Don't bother! Listen and be amazed!
+Yarrwick: Per'aps I can entice ye with me favorite, The Lady of the Sea? No?
 Yarrwick: Well, what troubles be on yer mind, moilin' 'round like yer mad?
-- Maeve: I don't have time for your silly stories!Petherfar's been attacked!
-	=> bad_choice
-- Maeve: Who are you?I never seen you in this village before.
-	=> good_choice
+- "I've no time for your whimsical tales, ye sea-faring storyteller!"
+	=> long_rat_start
+- "There's an air of admirable charisma about this fellow. Who are ye, pirate?"
+	Maeve: Who are ye, pirate?
+	y: Aye, I be the dreaded Two Hook Yarr! Ye have fallen into me trap so's I can plunder yer coin!
+	y: ( Very interesting, this one... )
+	y: Aye... not amused I see...
+	m: Where ever does the name Two Hook Yarr come from?
+	y: Now I be nothing but the retired pirate of the land, driven t' wander.
+	I'd but 20 moons when I was recruited by the Corsairs o' Cleveport, in the Jade Isles. A curse t' treachery, now that be apparent.
+	Blacksmith Rancent welcomed me 'ere, not like those fancy Lordships in House Clemont.
+	The lack o' hands be quite a conviction, aye?
+	Aye, Blacksmith Rancent. A real 'ardy feller.
+	- "You're quite the character..."
+		=> stay_a_while_start
+	- "I've heard stories about Rancent..."
+		=> the_riddle_start
 
-~ bad_choice
+~ the_riddle_start
+m: I've heard stories about Rancent, about how he keeps this village running, how well he treats the people.
+y: Aye, Rancent be a complicated man. That there beard o' 'is be like 'is measurement o' wisdom.
+On my voyages, I've learned many riddles. This one would surely stump that old fart. 
+Let me see if I can ruffle your feathers with this one.
+m: Don't get to cocky ya ole pirate! I've solved my fair share of riddles too!
+I bet I get it with 3 or less tries!
+y: ( AYE! AT LAST A CHALLENGER! )
+- < The Riddle > Takes a Modest amount of time to complete.
+	=> the_riddle_complete
+	
+~ the_riddle_complete
 
+y: Who sails the seas in the dead of night with a ship that glows in a ghastly light?
+m: I've heard this before. I know this one!
+The Phantom Captain?
+y: Argh, wrong!
+m: Okay Pirate. I'm going out on the plank and saying...
+The Ghost of Cleveport!
+y: What... how... only a Pirate would know...
+m: That riddle is known to nearly Bard across the realm. It's old as time.
+I best feed ye t' the fish Maeve!
+Both: ( laugh )
+y: Aye, when I see Rancent, I will be sure t' tell 'im I were out-witted by a Bard!
+- < The Riddle > is complete.
+	do Global.exit_dialogue(6, -25.0)
+	set Quests.the_riddle = "complete"
+	=> END
+
+~ stay_a_while_start
+
+m: You're quite the character, but do you think you can convince people that I'm trustworthy?
+y: 'Course I've favor t' offer. Though I'dn't be worried fer o'er'bundance on trust gained from the village pirate!
+I be not one to vouch fer strangers, though. Aye, join me in conversation, laddie!
+m: I know a good story teller when I see one. What do you have conjuring up in that head of yours?
+y: I've sailed the Jade Tide before you were alive, pillaged my share if you dare...
+...mingled with the Lady of the Seas, oh I was pleased, and least not forget...
+...I was an orphan which was to my misfortune...
+( These spectacles are going to end me.. )
+m: ( Think I'll stay a while and enjoy his company. )
+Yarr! Or Argh? Tell me another tale that surely will rumble my belly!
+y: ( Nonsense with this one... )
+- < Stay a While > Takes a Modest amount of time to complete.
+	=> stay_a_while_complete
+	
+~ stay_a_while_complete
+
+m: ( In a "conversation" both people are supposed to talk, right? )
+( But there's something mesmerizing about his short stories, )
+( One could listen to many of them in rapid succession... )
+y: Yer probably wonderin' about me storied past.
+I was makin' a quarter-million ounces o' gold a year plunderin' frigates for the Corsairs o' Cleveport...
+m: ( He's begun to repeat himself... )
+( Why is he checking the wind with his finger? )
+y: Maeve, me little pirate 'eart is full o' glee. 'ppreciate ye fer listenin' t' me tales.
+T'is time to feed me first mate, Mr. Tiggles. This long rat is breachin' for a screechin'! 
+- < Stay a While > is complete.
+	do Global.exit_dialogue(6, -25.0)
+	set Quests.stay_a_while = "completed"
+	=> END
+
+~ long_rat_start
+
+Maeve: I've no time for your whimsical tales, ye sea-faring storyteller!
 Yarrwick: Drop yer anchors laddie! Silly stories?
-Yarrwick: Have ye deciphered the Keep o' the Doomseeker 'r stood eye t' glowin' eye 'gainst the Sons o' the Southern Seas, AND lived t' tell the tale?
+Yarrwick: 'ave ye deciphered the Keep o' the Doomseeker 'r stood eye t' glowin' eye 'gainst the Sons o' the Southern Seas, AND lived t' tell the tale?
 Yarrwick: Argh! 'Course not!
 Yarrwick: Aye, me tales be chronicles o' only the most adventurous and fierce events on the high seas.
 Maeve: ( He's still shouting every word )
@@ -20,36 +104,52 @@ Maeve: Anyway, Magistrate Karth sent me to gain the trust of the Messenger of Lo
 Yarrwick: Spy me first mate o'er yonder? Aye, the long rat, Mr. Tiggles!
 Maeve: ( ...that ferret with an eye-patch? )
 Yarrwick: Methinks a chantey is in order to cheer him from yer bad attitude! Whatcha know on that lute?
-Maeve: ( Ew, he's clapping  ) 
+Maeve: ( Ew, he's clapping. ) 
 Maeve: Is your head okay? Walk the plank too many times? Fall off the crow's nest?
-Maeve: ( Uh oh, he's dancing )
+Maeve: ( Uh oh, he's dancing now. )
 Maeve: It's not sea chantey time, this is serious!
 Yarrwick: Aye, y'ev'r 'ear the one 'bout the Marooned Baffoon?
 Maeve: I'm not even sure what you said.
-Yarrwick: Argh, the tale o' the Buffoon twice Maroon'd, aye, but that be spoilin', ye privy to it?
+Yarrwick: Argh, the tale o' the Buffoon twice Maroon'd, aye, but that be spoilin'... ye privy to it?
 Maeve: ...Nnooo..?
-Maeve: But I don't want to be.
-Yarrwick: Aye, ye be thirsting fer the glorious Legend o' the Crimson Keg, then?
+Maeve:But I don't want to be.
+Yarrwick: Aye, ye be thirstin' fer the glorious Legend o' the Crimson Keg, 'en?
 Maeve: Nope.
 Maeve: That's not even real, is it?
-Maeve: Whatever, the Messenger. Do you know him?
-Yarrwick: Aye, he be surely a landlubber.
-Yarrwick: 'Gardless, he tethers up by me tent on occasion, flips me a coin if me riddles stump him!
+Maeve: The Messenger. Do you know him?
+Yarrwick: Aye, 'e be surely a landlubber.
+Yarrwick: 'Gardless, 'e tethers up by me tent on occasion, flips o'er a coin if me riddles stump 'im!
 Yarrwick: Bards, I know 'em. Indulge in a riddle, won't ye?
 Maeve: Ugh! I don't have time for you and your stupid riddles!
 Yarrwick: Avast, lower yer tone! Even now the long rat be escaped!
-Yarrwick: Argh, that there scaring Mr. Tiggles...
-Yarrwick: ...argh, to yer fortune this village me not me ship...
+Yarrwick: Argh, that there scarin' Mr. Tiggles...
+Yarrwick: ...argh, 'tis to yer fortune this village me not me ship...
 Yarrwick: ....argh, overboard with ye...
 Yarrwick: ...scallywags like yerself...
 Yarrwick: ...carry yer lute 'cross the plank, cast yerself into the sea...
-Yarrwick: Just wait 'til the messenger 'ears 'bout ye! 
-Maeve: Argh! Fine! I'll fetch the long rat for you!
+Yarrwick: Just wait 'til the messenger 'ears 'bout ye!
+Maeve: Ugh! Fine! I'll fetch the "long rat" for you!
+- < The Long Rat > Takes a Long amount of time to complete.
+	do Global.exit_dialogue(0, -0.0)
+	set Quests.long_rat_quest = "active"
+	=> END
 
-set is_chatting = false
-=> END
+~ long_rat_active
+	
+Yarrwick: Ye 'ave a long rat t' round. Les' I be mistaken.
+	
+~ long_rat_complete
 
-~ good_choice
-
-=> END
-
+Maeve: Here's that "rat" of yours! I found him by Rancent's shop.
+Maeve: Did you mention my warning to the Messenger?
+Yarrwick: No prey, No pay!
+Maeve: So, you never even told him how urgent my warning is?
+Yarrwick: Ye near scuttled me ship this time. But per'aps we'll meet again, by the will o' the winds.
+Yarrwick: But me treasured Mr. Tiggles be returned. 
+Yarrwick: Stern as a bo's'n and a hull o' quartz one must 'ave t' round this feller.
+Yarrwick: Ye be hearties material, but matey I be callin' ye no faster 'an I be callin' dinner bell on 'am night
+Maeve: ( Cryptic, but I feel I've gained some kind of standing. )
+- < The Long Rat > is complete.
+	do Global.exit_dialogue(3, -40.0)
+	set Quests.long_rat_quest = "complete"
+	=> END

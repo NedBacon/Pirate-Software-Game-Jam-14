@@ -1,5 +1,10 @@
 ~ Start
 
+if Quests.cautiously_optmistic == "unknown" and Quests.collateral == "unknown"
+	=> cyotin_intro
+
+~ cyotin_intro
+
 Cyotin: ( Howls ) My satchel. Where is it? 
 Cyotin: On a crows lung! You in the tunic. Tone down that racket!
 - Maeve: ( Cautiously approaches Cyotin )
@@ -10,38 +15,119 @@ Cyotin: On a crows lung! You in the tunic. Tone down that racket!
 	Maeve: Is that the reason behind your fervent quest for your satchel?
 	Cyotin: The survival of the village is in there.
 	Cyotin: Where could it be!?
-	- Maeve: Last I've seen you was conversing with Barta at her inn. 
+	- "Last I've seen you was conversing with Barta at her inn."
+		Maeve: Last I've seen you was conversing with Barta at her inn.
 		Cyotin: Is she well?
 		Maeve: Sadly, Barta was attacked by an evil spell that Silences all forms of communication!
 		Cyotin: Perhaps my intuition hasn't deceived me.
 		Cyotin: I too, fear for her. Does this curse spread?
 		Maeve: It spread from Dren to Barta. Uncertain at what progression.
-		# Start Cautiously Optimistic Quest
-	- Maeve: Why can't everything unfold smoothly right from the start? 
-		Cyotin: ( I too, recall the same frustration she has when I first arrived here )
-		Cyotin: What were you on about? You have my brief attention.
-		Maeve: I can't convince the locals of a terrible spell that will mute us all.
-		Maeve: The Messenger negates me and I can't use my lute to lull him. No magical powers.
-		Maeve: Why is the Silence of words more fearful then the thought of Faragon's invasion?
-		Cyotin: It's the Silence of empathy. Attacking our very being on what makes us alive.
-		Cyotin: Your way of life Maeve.
-		Maeve: You're the protector of this village. Help me rally them?
+		=> cautiously_optmistic_start
+		
+	- "Why can't everything unfold smoothly right from the start?"
+		Maeve: Why can't everything unfold smoothly right from the start?
+		=> cautiously_optmistic_intro
 		# Start Cautiously Optimistic Quest
 		
-	# Cautiously Optimistic Dialogue before getting the Quest 
+		# Main Bad Choice
+- "And you never been frustrated before, Jacari?"
+	Maeve: And you never been frustrated before, Jacari?
+	Cyotin: This satchel is invaluable, a vessel of profound importance.
+	Cyotin: It carries the very core of my being!
+	Maeve: Your being? It's just a bag.
+	Cyotin: Nay! You fail to grasp the significance. Without out it, I'm like a Bard without a song!
+	Maeve: A Bard without a song? That's a bit dramatic, don't you think?
+	Cyotin: Dramatic you say? Something wicked is encroaching over the horizon!
+	Maeve: Yes! Yes! That is what I'm shouting! 
+	
+	# Secondary Bad Choice A
+	 - "No one is listening! Don't you know how frustrating that is?"
+		Maeve: No one is listening! Don't you know how frustrating that is?
+		=>
+		
+	# Secondary Bad Choice B
+	- "We share the same thoughts, forget your satchel!"
+		Maeve: We share the same thoughts, forget your satchel!
+		Cyotin: No Maeve, we don't
+		Maeve: Now you're frustrating me, coyote man!
+		Cyotin: The progress of securing the village protection is stalling...
+		Maeve: I wholeheartedly agree!
+		Maeve: Here is my lute. Use it for collateral. 
+		Maeve: I'll look for your bag. I need you to trust me.
+		Cyotin: Do as you wish. Find it and I shall. 
+		- < Collateral > Takes a Steady amount of time to complete.
+		 	#Start Collateral Item Quest
+	
+~ cautiously_optimistic_intro
+	
+	Cyotin: ( I too, recall the same frustration she has when I first arrived here )
+	Cyotin: What were you on about? You have my brief attention.
+	Maeve: I can't convince the locals of a terrible spell that will mute us all.
+	Maeve: The Messenger negates me and I can't use my lute to lull him. No magical powers.
+	Maeve: Why is the Silence of words more fearful then the thought of Faragon's invasion?
+	Cyotin: It's the Silence of empathy. Attacking our very being on what makes us alive.
+	Cyotin: Your way of life Maeve.
+	Maeve: You're the protector of this village. Help me rally them?
+	=> cautiously_optimistic_start
+	
+	~ cautiously_optimistic_start
+	
 	Cyotin: My concerns are now preparing for the safety of the village.
 	Cyotin: Search for my sachel. What's in there will provide hope.
 	 - < Cautiously Optimistic > Takes a Moderate amount of time to complete.
+		do Global.exit_dialogue(0, 0.0)
 	
-	# Cautiously Optimistic Active
-	Cyotin: Check the parameter of the village for the Satchel, it must be around here somewhere. 
-	# End
+	# Cautiously Optimistic Active -- When accpeting the quest? If not needed delete
+	Cyotin: Inspect the village parameters to locate the Satchel; it should be in close proximity. 
 	
+	#Cautiously Optimistic Quest Dialogue before accepting quest
+	Cyotin: My concerns are now preparing for the safety of this village. 
+	Cyotin: Search for my Satchel. What's in there will provide hope.
+	- < Cautiously Optimistic > Takes a Moderate amount of time to complete.
 	
 
-		
--  Maeve: And you never been frustrated before, Jacari?
+# Cautiously Optimistic Start
+Maeve: How can your Satchel give us hope?
+Cyotin: You look Tercian? 
+Maeve: My Name day was in Loradon.. how did you...
+Cyotin: Let's say we are of kindred spirits Maeve.
+Cyotin: ( There's my prize )
+Cyotin: The Spark of Whispers! This prism can absorb Dark Magic.
+Maeve: Hail the Stars! Can this save us all?
+Cyotin: It can save the one who bears it.
+Maeve: How did you obtain it?
+Cyotin: It was a gift from The Messenger of Lord Wendell when I couldn't find my place here.
+Cyotin: Take it to him and only reveal it when you have his favor.
+- < Cautiously Optimistic > is complete.
+	do Global.exit_dialogue(8,-35.0)
+	set two_witnesses = "completed"
+	=> END
 
+	# Collateral Active -- When accpeting the quest? If not needed delete
+	Cyotin: Inspect the village parameters to locate the Satchel; it should be in close proximity. 
+	
+# Collateral Start
+Maeve: At ease... I didn't peak into your satchel. Here you go!
+Cyotin: And your lute unscathed. 
+Cyotin: Whatever our shared perception is, it has already transpired.
+Cyotin: Go on your way and warn the others. I have a meeting with Lord Wendell's Messenger.
+- < Collateral > is complete.
+	do Global.exit_dialogue(4,-50.0)
+	set two_witnesses = "completed"
+	=> END
+
+	
+# Quest active
+Cyotin: I need my Satchel! It's of utmost importance!
+do Global.exit_dialogue(0, -0.0)
+=> END
+
+
+~ any_quest_completed
+
+Cyotin: My testimony will be presented to The Messenger
+
+do Global.exit_dialogue(0, -0.0)
 => END
 
 
